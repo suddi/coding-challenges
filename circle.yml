@@ -8,4 +8,4 @@ dependencies:
         - pip install -r test_requirements.txt
 test:
     override:
-        - pytest -c pytest.ini
+        - pytest -c test/setup.cfg
