@@ -1,0 +1,11 @@
+machine:
+    timezone:
+        Asia/Hong_Kong
+    python:
+        version: "2.7"
+dependencies:
+    override:
+        - pip install -r test_requirements.txt
+test:
+    override:
+        - pytest -c pytest.ini
