@@ -1,6 +1,5 @@
 # FILES
 *.o
-*.txt
 *.pyc
 
 # DIRECTORIES
