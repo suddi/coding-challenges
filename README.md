@@ -1,5 +1,8 @@
 # Coding Challenges
 
+[![CircleCI](https://img.shields.io/circleci/project/github/suddi/coding-challenges.svg)](https://github.com/suddi/coding-challenges)
+[![license](https://img.shields.io/github/license/suddi/coding-challenges.svg)](https://github.com/suddi/coding-challenges)
+
 Solutions to common coding challenge questions answered in Python 2.7.
 
 ## Setup
