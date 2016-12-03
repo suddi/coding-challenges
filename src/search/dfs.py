@@ -74,26 +74,29 @@ def get_shortest_route(results):                                    # O(N)
         'length': -1
     }                                                               # O(1)
 
-def bfs(routelist, queue, finish):
-    results = []                                                    # O(1)
-    while queue:                                                    # O(N)
-        node = queue.popleft()                                      # O(1)
-        current_position = node['position']                         # O(1)
-        current_result = node['result']                             # O(1)
-        current_visited = node['visited']                           # O(1)
-        if current_position == finish:                              # O(1)
-            results.append(current_result)                          # O(1)
-            continue                                                # O(1)
+def dfs(routelist, node, finish, results=[]):
+    current_position = node['position']                             # O(1)
+    current_result = node['result']                                 # O(1)
+    current_visited = node['visited']                               # O(1)
+    if current_position == finish:                                  # O(1)
+        results.append(current_result)                              # O(1)
 
-        current_visited[current_position] = True                    # O(1)
-        next_positions = routelist[current_position]                # O(1)
-        for position, distance in next_positions.iteritems():       # O(N)
-            if not current_visited[position]:                       # O(1)
-                queue.append(get_next_node(current_result,
-                                          current_visited,
-                                          position, distance))      # O(1)
+    current_visited[current_position] = True                        # O(1)
+    next_positions = routelist[current_position]                    # O(1)
+    for position, distance in next_positions.iteritems():           # O(N)
+        if not current_visited[position]:                           # O(1)
+            return dfs(
+                routelist,
+                get_next_node(
+                    current_result,
+                    current_visited,
+                    position, distance
+                ),
+                finish,
+                results
+            )                                                       # O(N)
 
-    return results
+    return results                                                  # O(1)
 
 def solution(routes, start, finish):
     """
@@ -121,18 +124,16 @@ def solution(routes, start, finish):
             'length': -1
         }                                                           # O(1)
 
-    queue = deque([
-        {
-            'position': start,
-            'result': {
-                'route': [start],
-                'length': 0
-            },
-            'visited': prepare_visited(routelist)
-        }
-    ])                                                              # O(1)
+    node = {
+        'position': start,
+        'result': {
+            'route': [start],
+            'length': 0
+        },
+        'visited': prepare_visited(routelist)
+    }                                                               # O(1)
 
-    results = bfs(routelist, queue, finish)                         # O(N^2)
+    results = dfs(routelist, node, finish)                          # O(N^2)
     return get_shortest_route(results)                              # O(N)
 
 if __name__ == '__main__':
