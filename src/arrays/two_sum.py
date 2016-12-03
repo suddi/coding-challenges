@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-def solution(numbers, target):
+def solution(numbers, target):                                      # O(N)
     """
     Write a function that will return the indexes to be used to add up numbers to reach a given target.
 

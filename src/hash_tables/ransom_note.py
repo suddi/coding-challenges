@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-def solution(magazine, ransom):
+def solution(magazine, ransom):                                     # O(N^2)
     """
     Similar to src.strings.making_anagrams, detect if 2 strings can be equated by only removing some words.
 

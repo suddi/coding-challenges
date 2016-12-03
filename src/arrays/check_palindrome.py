@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-def solution(a):
+def solution(a):                                                    # O(N/2)
     """
     Write a function to check if the input string is a palindrome.
     A palindrome is defined a string that reads the same backwards and forwards.

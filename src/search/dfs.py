@@ -74,7 +74,7 @@ def get_shortest_route(results):                                    # O(N)
         'length': -1
     }                                                               # O(1)
 
-def dfs(routelist, node, finish, results=[]):
+def dfs(routelist, node, finish, results=[]):                       # O(N^2)
     current_position = node['position']                             # O(1)
     current_result = node['result']                                 # O(1)
     current_visited = node['visited']                               # O(1)
@@ -98,7 +98,7 @@ def dfs(routelist, node, finish, results=[]):
 
     return results                                                  # O(1)
 
-def solution(routes, start, finish):
+def solution(routes, start, finish):                                # O(N^2)
     """
     Given a list of routes and their lengths, find the shortest route between 2 nodes using breadth first search.
 

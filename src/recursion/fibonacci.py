@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-def solution(number):
+def solution(number):                                               # O(M+N)
     """
     Write a function to compute the fibonacci sequence value to the requested iteration.
 

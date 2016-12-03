@@ -74,7 +74,7 @@ def get_shortest_route(results):                                    # O(N)
         'length': -1
     }                                                               # O(1)
 
-def bfs(routelist, queue, finish):
+def bfs(routelist, queue, finish):                                  # O(N^2)
     results = []                                                    # O(1)
     while queue:                                                    # O(N)
         node = queue.popleft()                                      # O(1)
@@ -95,7 +95,7 @@ def bfs(routelist, queue, finish):
 
     return results
 
-def solution(routes, start, finish):
+def solution(routes, start, finish):                                # O(N^2)
     """
     Given a list of routes and their lengths, find the shortest route between 2 nodes using breadth first search.
 

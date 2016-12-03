@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-def solution(a):
+def solution(a):                                                    # O(N/2)
     """
     Write a function to reverse a list without using the built-in function.
 

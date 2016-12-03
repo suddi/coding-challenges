@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-def solution(expression):
+def solution(expression):                                           # O(N)
     """
     Write a function to detect if brackets/parantheses are balanced, given an input string.
     eg. "[{}]" is balanced, "[{)}]" is not

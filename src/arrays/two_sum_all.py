@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-def solution(numbers, target):
+def solution(numbers, target):                                      # O(N)
     """
     Similar to src.arrays.two_sum, find all the combinations that can be added up to reach a given target.
     Given that all values are unique.

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-def solution(a, b):
+def solution(a, b):                                                 # O(N^2)
     """
     Given 2 strings, write a function to compute how many deletions are necessary to
     transform one string to an anagram of the other.

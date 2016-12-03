@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-def solution(A, B, M, X, Y):
+def solution(A, B, M, X, Y):                                        # O(N)
     """
     You are provided arrays A and B, and values M, X and Y:
     A contains the list of the weight of N people waiting to use the elevator.

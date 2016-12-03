@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-def solution(A, B):
+def solution(A, B):                                                 # O(M+N)
     """
     Write a function to combine 2 numbers such that numbers are merged by their position.
     eg. 111 and 222 becomes 121212

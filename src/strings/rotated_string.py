@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-def solution(a, b):
+def solution(a, b):                                                 # O(N)
     """
     Detect whether two strings are the same, but rotated strings.
     eg. "aabbcc" and "bccaab" are the same but rotated

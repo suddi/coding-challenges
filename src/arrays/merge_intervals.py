@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-def solution(a):
+def solution(a):                                                    # O(NlogN)
     """
     Given a list of tuples, merge the tuples to show only the non-overlapping intervals.
 

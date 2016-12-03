@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-def solution(a):
+def solution(a):                                                    # O(N)
     """
     Write a function to group together all ascending sublists within a list a.
 
