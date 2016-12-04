@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-def solution(number):                                               # O(M+N)
+def solution(number):                                               # O(2^N)
     """
     Write a function to compute the fibonacci sequence value to the requested iteration.
 
@@ -16,7 +16,7 @@ def solution(number):                                               # O(M+N)
     elif number == 1:                                               # O(1)
         return 1                                                    # O(1)
     else:                                                           # O(1)
-        return solution(number - 1) + solution(number - 2)          # O(M+N)
+        return solution(number - 1) + solution(number - 2)          # O(2^N)
 
 if __name__ == '__main__':
     import doctest
