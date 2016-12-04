@@ -41,8 +41,8 @@ def merge_sort(A, left, right):
     if left < right:                                                # O(1)
         middle = left + ((right - left) / 2)                        # O(1)
 
-        merge_sort(A, left, middle)                                 # O(NlogN)
-        merge_sort(A, middle + 1, right)                            # O(NlogN)
+        merge_sort(A, left, middle)                                 # O(logN)
+        merge_sort(A, middle + 1, right)                            # O(logN)
 
         left_list = get_list(A, left, middle)                       # O(N)
         right_list = get_list(A, middle + 1, right)                 # O(N)
