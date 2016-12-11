@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-def solution(a, b):                                                 # O(N^2)
+def solution(A, B):                                                 # O(N^2)
     """
     Given 2 strings, write a function to compute how many deletions are necessary to
     transform one string to an anagram of the other.
@@ -14,15 +14,15 @@ def solution(a, b):                                                 # O(N^2)
     >>> solution('abc', 'dba')
     2
     """
-    list_a = list(a)                                                # O(N)
-    list_b = list(b)                                                # O(N)
-    total_length = len(list_a) + len(list_b)                        # O(1)
+    list_A = list(A)                                                # O(N)
+    list_B = list(B)                                                # O(N)
+    total_length = len(list_A) + len(list_B)                        # O(1)
 
     anagram = []                                                    # O(1)
-    for char in list_a:                                             # O(N)
-        if char in list_b:                                          # O(1)
+    for char in list_A:                                             # O(N)
+        if char in list_B:                                          # O(1)
             anagram.append(char)                                    # O(1)
-            list_b.remove(char)                                     # O(N)
+            list_B.remove(char)                                     # O(N)
 
     deletions_needed = total_length - (2 * len(anagram))            # O(1)
     return deletions_needed                                         # O(1)

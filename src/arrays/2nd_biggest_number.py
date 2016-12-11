@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-def solution(a):                                                    # O(N)
+def solution(A):                                                    # O(N)
     """
     Write a function to find the 2nd biggest number in a list.
 
@@ -13,7 +13,7 @@ def solution(a):                                                    # O(N)
     max_1 = None                                                    # O(1)
     max_2 = None                                                    # O(1)
 
-    for value in a:                                                 # O(N)
+    for value in A:                                                 # O(N)
         if not max_1:                                               # O(1)
             max_1 = value                                           # O(1)
         elif value > max_1:                                         # O(1)

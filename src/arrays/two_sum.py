@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-def solution(numbers, target):                                      # O(N)
+def solution(A, target):                                            # O(N)
     """
     Write a function that will return the indexes to be used to add up numbers to reach a given target.
 
@@ -11,10 +11,10 @@ def solution(numbers, target):                                      # O(N)
     """
     remaining = {}                                                  # O(1)
 
-    for count, number in enumerate(numbers):                        # O(N)
-        if number in remaining:                                     # O(1)
-            return [remaining[number], count]                       # O(1)
-        remaining[target - number] = count                          # O(1)
+    for count, value in enumerate(A):                               # O(N)
+        if value in remaining:                                      # O(1)
+            return [remaining[value], count]                        # O(1)
+        remaining[target - value] = count                           # O(1)
 
     return []                                                       # O(1)
 

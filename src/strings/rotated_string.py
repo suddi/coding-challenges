@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-def solution(a, b):                                                 # O(N)
+def solution(A, B):                                                 # O(N)
     """
     Detect whether two strings are the same, but rotated strings.
     eg. "aabbcc" and "bccaab" are the same but rotated
@@ -10,15 +10,15 @@ def solution(a, b):                                                 # O(N)
     >>> solution('aabbcc', 'bccaabb')
     False
     """
-    length_a = len(a)                                               # O(1)
-    length_b = len(b)                                               # O(1)
-    if (length_a != length_b):                                      # O(1)
+    length_A = len(A)                                               # O(1)
+    length_B = len(B)                                               # O(1)
+    if (length_A != length_B):                                      # O(1)
         return False                                                # O(1)
 
-    for i in xrange(0, length_a):                                   # O(N)
-        if a == b:                                                  # O(1)
+    for i in xrange(0, length_A):                                   # O(N)
+        if A == B:                                                  # O(1)
             return True                                             # O(1)
-        a = a[1:] + a[0]                                            # O(1)
+        A = A[1:] + A[0]                                            # O(1)
 
     return False                                                    # O(1)
 

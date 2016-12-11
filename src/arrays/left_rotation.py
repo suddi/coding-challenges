@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-def solution(a, k):                                                 # O(N^2)
+def solution(A, k):                                                 # O(N^2)
     """
     Write a function to left rotate a list a by k number of times.
     eg. [1, 2, 3]
@@ -16,8 +16,8 @@ def solution(a, k):                                                 # O(N^2)
         return value                                                # O(1)
 
     for i in range(0, k):                                           # O(N)
-        a = rotate(a)                                               # O(N)
-    return a                                                        # O(1)
+        A = rotate(A)                                               # O(N)
+    return A                                                        # O(1)
 
 if __name__ == '__main__':
     import doctest

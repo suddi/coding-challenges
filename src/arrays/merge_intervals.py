@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-def solution(a):                                                    # O(NlogN)
+def solution(A):                                                    # O(NlogN)
     """
     Given a list of tuples, merge the tuples to show only the non-overlapping intervals.
 
@@ -9,11 +9,11 @@ def solution(a):                                                    # O(NlogN)
     >>> solution([(1, 4), (4, 8), (2, 5), (14, 19)])
     [(1, 8), (14, 19)]
     """
-    a.sort(key=lambda value: value[0])                              # O(NlogN)
+    A.sort(key=lambda value: value[0])                              # O(NlogN)
     merged = []                                                     # O(1)
     target = None                                                   # O(1)
 
-    for i in a:                                                     # O(N)
+    for i in A:                                                     # O(N)
         if not target:                                              # O(1)
             target = i                                              # O(1)
         elif target[1] >= i[0]:                                     # O(1)

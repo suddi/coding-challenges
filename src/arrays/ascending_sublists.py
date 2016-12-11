@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-def solution(a):                                                    # O(N)
+def solution(A):                                                    # O(N)
     """
     Write a function to group together all ascending sublists within a list a.
 
@@ -12,7 +12,7 @@ def solution(a):                                                    # O(N)
     output = []                                                     # O(1)
     inner = []                                                      # O(1)
 
-    for value in a:                                                 # O(N)
+    for value in A:                                                 # O(N)
         if not inner or value >= inner[-1]:                         # O(1)
             inner.append(value)                                     # O(1)
         elif value < inner[-1]:                                     # O(1)
