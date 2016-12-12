@@ -16,12 +16,10 @@ def solution(number):                                               # O(N)
         1: 1
     }                                                               # O(1)
 
-    def run_sequence(n):                                            # O(N)
-        if not isinstance(m.get(n), int):                           # O(1)
-            m[n] = run_sequence(n - 1) + run_sequence(n - 2)        # O(N)
-        return m[n]                                                 # O(1)
+    for i in xrange(2, number + 1):                                 # O(N)
+        m[i] = m[i - 1] + m[i - 2]                                  # O(1)
 
-    return run_sequence(number)                                     # O(N)
+    return m[number]                                                # O(1)
 
 if __name__ == '__main__':
     import doctest
