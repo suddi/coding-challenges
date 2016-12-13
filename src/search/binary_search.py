@@ -24,8 +24,8 @@ def solution(A, target):                                            # O(N/2)    
             if mid == lower:                                        # O(1)
                 break                                               # O(1)
             lower = mid + 1                                         # O(1)
-        elif value > target:                                        # O(1)
-            upper = mid + 1                                         # O(1)
+        else:                                                       # O(1)
+            upper = mid                                             # O(1)
 
     return -1                                                       # O(1)
 
