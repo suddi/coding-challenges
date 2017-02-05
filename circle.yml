@@ -9,3 +9,6 @@ dependencies:
 test:
     override:
         - pytest -c test/setup.cfg
+notify:
+    webhooks:
+        - url: https://bot.suddi.io/hooks/circle
