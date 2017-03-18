@@ -1,5 +1,6 @@
 # Coding Challenges
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/f49da84091a24ef8bae87bdc4ed10423)](https://www.codacy.com/app/Suddi/coding-challenges?utm_source=github.com&utm_medium=referral&utm_content=suddi/coding-challenges&utm_campaign=badger)
 [![CircleCI](https://img.shields.io/circleci/project/github/suddi/coding-challenges.svg)](https://circleci.com/gh/suddi/coding-challenges)
 [![license](https://img.shields.io/github/license/suddi/coding-challenges.svg)](https://github.com/suddi/coding-challenges/blob/master/LICENSE)
 
