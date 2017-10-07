@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-from collections import deque
 from copy import deepcopy
 
 def parse_route(route):                                             # O(1)
@@ -61,7 +60,7 @@ def get_next_node(result, visited, position, distance):             # O(N)
     return state                                                    # O(1)
 
 def get_shortest_route(results):                                    # O(N)
-    final_result = None                                             # O(1)
+    final_result = {}                                               # O(1)
     for result in results:                                          # O(N)
         if not final_result or \
            result['length'] < final_result['length']:               # O(1)
@@ -74,7 +73,7 @@ def get_shortest_route(results):                                    # O(N)
         'length': -1
     }                                                               # O(1)
 
-def dfs(routelist, node, finish, results=[]):                       # O(N^2)
+def dfs(routelist, node, finish, results):                          # O(N^2)
     current_position = node['position']                             # O(1)
     current_result = node['result']                                 # O(1)
     current_visited = node['visited']                               # O(1)
@@ -98,9 +97,11 @@ def dfs(routelist, node, finish, results=[]):                       # O(N^2)
 
     return results                                                  # O(1)
 
+# pylint: disable-msg=line-too-long
 def solution(routes, start, finish):                                # O(N^2)
     """
-    Given a list of routes and their lengths, find the shortest route between 2 nodes using breadth first search.
+    Given a list of routes and their lengths, find the shortest route between 2 nodes using breadth
+    first search.
 
     >>> solution([('a-b', 4), ('b-c', 2), ('a-f', 1), ('a-j', 2), ('b-d', 3), ('c-e', 1), ('d-g', 3), ('c-i', 1), ('f-h', 2)], 'a', 'c')
     {'route': ['a', 'b', 'c'], 'length': 6}
@@ -133,7 +134,7 @@ def solution(routes, start, finish):                                # O(N^2)
         'visited': prepare_visited(routelist)
     }                                                               # O(1)
 
-    results = dfs(routelist, node, finish)                          # O(N^2)
+    results = dfs(routelist, node, finish, [])                      # O(N^2)
     return get_shortest_route(results)                              # O(N)
 
 if __name__ == '__main__':

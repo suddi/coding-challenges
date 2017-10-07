@@ -2,7 +2,8 @@
 
 def solution(A, target):                                            # O(N)
     """
-    Write a function that will return the indexes to be used to add up numbers to reach a given target.
+    Write a function that will return the indexes to be used to add up numbers
+    to reach a given target.
 
     >>> solution([1, 2, 3, 4, 5], 5)
     [1, 2]

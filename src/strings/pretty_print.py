@@ -2,7 +2,8 @@
 
 def solution(A):                                                    # O(N)
     """
-    Given a list of tuples, pretty print it to show the associated key and value as columns in a table.
+    Given a list of tuples, pretty print it to show the associated key and
+    value as columns in a table.
     eg. [('hello', 3), ('world', 2), ('this', 5), ('is', 2), ('fun', 9), ('hello', 1)]
     should become:
     hello world this is fun

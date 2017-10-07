@@ -5,10 +5,11 @@ machine:
         version: "2.7"
 dependencies:
     override:
-        - pip install -r test_requirements.txt
+        - pip install --requirement test_requirements.txt
 test:
     override:
-        - pytest -c test/setup.cfg
+        - python setup.py lint
+        - python setup.py test
 notify:
     webhooks:
         - url: https://bot.suddi.io/hooks/circle

@@ -2,7 +2,8 @@
 
 def solution(magazine, ransom):                                     # O(N^2)
     """
-    Similar to src.strings.making_anagrams, detect if 2 strings can be equated by only removing some words.
+    Similar to src.strings.making_anagrams, detect if 2 strings can be equated by
+    only removing some words.
 
     >>> solution('give me one grand today night', 'give one grand one today')
     False
@@ -11,7 +12,6 @@ def solution(magazine, ransom):                                     # O(N^2)
     """
     list_a = magazine.split(' ')                                    # O(N)
     list_b = ransom.split(' ')                                      # O(N)
-    total_length = len(list_a) + len(list_b)                        # O(1)
 
     for word in list_b:                                             # O(N)
         if word in list_a:                                          # O(1)

@@ -11,7 +11,7 @@ def solution(A):                                                    # O(NlogN)
     """
     A.sort(key=lambda value: value[0])                              # O(NlogN)
     merged = []                                                     # O(1)
-    target = None                                                   # O(1)
+    target = ()                                                     # O(1)
 
     for i in A:                                                     # O(N)
         if not target:                                              # O(1)

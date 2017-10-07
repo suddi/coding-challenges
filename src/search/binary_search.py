@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-def solution(A, target):                                            # O(N/2)                        # O(N)
+def solution(A, target):                                            # O(N/2)
     """
     Apply binary search on sorted array of integers.
 

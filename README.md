@@ -13,7 +13,7 @@ pip install virtualenvwrapper
 ````
 
 ````sh
-mkvirtualenv cc
+mkvirtualenv coding-challenges
 
 pip install -r test_requirements.txt
 ````

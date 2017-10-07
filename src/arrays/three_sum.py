@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-def solution(A, sum):                                               # O(N^2)
+def solution(A, summed_value):                                      # O(N^2)
     """
     Write a function that will return the numbers used to add up to a certain value.
 
@@ -18,19 +18,19 @@ def solution(A, sum):                                               # O(N^2)
         return result                                               # O(1)
 
     A.sort()                                                        # O(NlogN)
-    for i, value in enumerate(A):                                   # O(N)
+    for i, _ in enumerate(A):                                       # O(N)
         j = i + 1                                                   # O(1)
         k = length - 1                                              # O(1)
 
         while j < k:                                                # O(N)
             computed = A[i] + A[j] + A[k]                           # O(1)
-            if computed == sum:                                     # O(1)
+            if computed == summed_value:                            # O(1)
                 result.append((A[i], A[j], A[k]))                   # O(1)
                 j += 1                                              # O(1)
                 k -= 1                                              # O(1)
-            elif computed < sum:                                    # O(1)
+            elif computed < summed_value:                           # O(1)
                 j += 1                                              # O(1)
-            elif computed > sum:                                    # O(1)
+            elif computed > summed_value:                           # O(1)
                 k -= 1                                              # O(1)
 
     return result                                                   # O(1)

@@ -2,10 +2,11 @@
 
 def prepare_dequeue(A):                                             # O(N)
     queue = []                                                      # O(1)
-    for i in xrange(0, len(A)):                                     # O(N)
+    for _ in xrange(0, len(A)):                                     # O(N)
         queue.append(A.pop())                                       # O(1)
     return queue                                                    # O(1)
 
+# pylint: disable-msg=line-too-long
 def solution(operations):                                           # O(N^2)
     """
     Create a FIFO queue using stack operations only.

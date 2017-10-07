@@ -2,7 +2,8 @@
 
 def solution(A, target):                                            # O(N)
     """
-    Write a function that will return True if consecutive values in provided list A adds up to the target.
+    Write a function that will return True if consecutive values in provided list A
+    adds up to the target.
 
     >>> solution([5, 7, 3, 4, 5], 12)
     True

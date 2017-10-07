@@ -15,7 +15,7 @@ def solution(A, k):                                                 # O(N^2)
         value.append(v)                                             # O(1)
         return value                                                # O(1)
 
-    for i in range(0, k):                                           # O(N)
+    for _i in range(0, k):                                          # O(N)
         A = rotate(A)                                               # O(N)
     return A                                                        # O(1)
 

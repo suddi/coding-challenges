@@ -61,7 +61,7 @@ def get_next_node(result, visited, position, distance):             # O(N)
     return state                                                    # O(1)
 
 def get_shortest_route(results):                                    # O(N)
-    final_result = None                                             # O(1)
+    final_result = {}                                               # O(1)
     for result in results:                                          # O(N)
         if not final_result or \
            result['length'] < final_result['length']:               # O(1)
@@ -90,14 +90,16 @@ def bfs(routelist, queue, finish):                                  # O(N^2)
         for position, distance in next_positions.iteritems():       # O(N)
             if not current_visited[position]:                       # O(1)
                 queue.append(get_next_node(current_result,
-                                          current_visited,
-                                          position, distance))      # O(1)
+                                           current_visited,
+                                           position, distance))     # O(1)
 
     return results
 
+# pylint: disable-msg=line-too-long
 def solution(routes, start, finish):                                # O(N^2)
     """
-    Given a list of routes and their lengths, find the shortest route between 2 nodes using breadth first search.
+    Given a list of routes and their lengths, find the shortest route between 2 nodes using breadth
+    first search.
 
     >>> solution([('a-b', 4), ('b-c', 2), ('a-f', 1), ('a-j', 2), ('b-d', 3), ('c-e', 1), ('d-g', 3), ('c-i', 1), ('f-h', 2)], 'a', 'c')
     {'route': ['a', 'b', 'c'], 'length': 6}

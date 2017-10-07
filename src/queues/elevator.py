@@ -1,5 +1,12 @@
 # -*- coding: utf-8 -*-
 
+def validate_floors(floors, max_floors):                            # O(N)
+    for floor in floors:                                            # O(N)
+        if floor > max_floors:                                      # O(N)
+            raise Exception('Requested floor higher than the ' + \
+                'maximum number of floors in the building: %s' \
+                % max_floors)                                       # O(1)
+
 def solution(A, B, M, X, Y):                                        # O(N)
     """
     You are provided arrays A and B, and values M, X and Y:
@@ -12,7 +19,8 @@ def solution(A, B, M, X, Y):                                        # O(N)
         Y (maximum weight limit on lift)
 
     Given that people must be served in the order they arrive,
-    Write a function to calculate the number of floors the lift must stop at and come back to the ground floor in order to service all of the people.
+    Write a function to calculate the number of floors the lift must stop at and come back
+    to the ground floor in order to service all of the people.
 
     eg. A = [40, 40, 100, 60], B = [3, 3, 2, 2], M = 3, X = 3, Y = 200
     1) Lift will take person 1, 2, 3 to floor 3 and floor 2 => 2 floors
@@ -45,6 +53,7 @@ def solution(A, B, M, X, Y):                                        # O(N)
     def run_elevator(c, f):
         return c + len(f) + 1                                       # O(1)
 
+    validate_floors(B, M)                                           # O(N)
     while i < length:                                               # O(N)
         if validate_weight(weight + A[i]) and \
            validate_capacity(num_people + 1):                       # O(1)

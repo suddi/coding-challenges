@@ -12,10 +12,10 @@ def solution(A, B):                                                 # O(N)
     """
     length_A = len(A)                                               # O(1)
     length_B = len(B)                                               # O(1)
-    if (length_A != length_B):                                      # O(1)
+    if length_A != length_B:                                        # O(1)
         return False                                                # O(1)
 
-    for i in xrange(0, length_A):                                   # O(N)
+    for _ in xrange(0, length_A):                                   # O(N)
         if A == B:                                                  # O(1)
             return True                                             # O(1)
         A = A[1:] + A[0]                                            # O(1)

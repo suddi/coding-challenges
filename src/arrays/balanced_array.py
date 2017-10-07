@@ -3,7 +3,8 @@
 def solution(A):                                                    # O(N)
     """
     You are given a list A (eg. [1, 2, 3, 7, 1, 5]).
-    Write a function to calculate the pivot of the array such that the left hand side = right hand side.
+    Write a function to calculate the pivot of the array such that the
+    left hand side = right hand side.
 
     In the example, pivot (P) = 3, because 1 + 2 + 3 = 1 + 5.
 
