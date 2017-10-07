@@ -15,11 +15,11 @@ pip install virtualenvwrapper
 ````sh
 mkvirtualenv coding-challenges
 
-pip install -r test_requirements.txt
+pip install --requirement test_requirements.txt
 ````
 
 ## Test
 
 ````sh
-pytest -c test/setup.cfg
+python setup.py test
 ````
