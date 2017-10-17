@@ -30,7 +30,7 @@
   "scripts": {
     "doctest": "mocha",
     "lint": "eslint .",
-    "prepush": "npm test",
+    "prepush": "npm test && python setup.py lint && python setup.py test",
     "security-check": "nsp check --output summary",
     "test": "npm run lint && npm run security-check && npm run doctest"
   },
