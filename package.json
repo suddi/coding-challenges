@@ -1,0 +1,54 @@
+{
+  "name": "coding-challenges",
+  "description": "Coding challenges practice questions",
+  "version": "1.0.0",
+  "homepage": "https://github.com/suddi/coding-challenges",
+  "author": {
+    "name": "Sudharshan Ravindran",
+    "email": "mail@suddi.io",
+    "url": "https://suddi.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/suddi/coding-challenges"
+  },
+  "bugs": {
+    "url": "https://github.com/suddi/coding-challenges/issues"
+  },
+  "files": [
+    "javascript"
+  ],
+  "main": "javascript/index.js",
+  "license": "MIT",
+  "keywords": [
+    "coding-challenges"
+  ],
+  "engines": {
+    "node": ">= 4.0.0",
+    "npm": ">= 2.0.0"
+  },
+  "scripts": {
+    "doctest": "mocha",
+    "lint": "eslint .",
+    "prepush": "npm test",
+    "security-check": "nsp check --output summary",
+    "test": "npm run lint && npm run security-check && npm run doctest"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^4.0.0",
+    "eslint-config-suddi": "^4.0.0",
+    "husky": "^0.14.0",
+    "jsdoctest": "^1.0.0",
+    "mocha": "^4.0.0",
+    "nsp": "^2.0.0"
+  },
+  "eslintConfig": {
+    "extends": "suddi/backend",
+    "rules": {
+      "valid-jsdoc": "off",
+      "complexity": "off",
+      "no-unused-vars": "off"
+    }
+  }
+}

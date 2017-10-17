@@ -1,0 +1,5 @@
+javascript
+--recursive
+--require jsdoctest
+--reporter spec
+--timeout 5000
