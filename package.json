@@ -48,7 +48,9 @@
     "rules": {
       "valid-jsdoc": "off",
       "complexity": "off",
-      "no-unused-vars": "off"
+      "no-unused-vars": "off",
+      "no-multi-spaces": "off",
+      "prefer-const": "off"
     }
   }
 }
