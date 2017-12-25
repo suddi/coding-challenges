@@ -46,7 +46,7 @@ function execute(command, printOutput = false) {
 
 function runTest(filename) {
     const outputFile = filename.replace(/\.cpp$/, '.out');
-    const compileCommand = `g++ -std=c++14 -o ${outputFile} ${filename}`;
+    const compileCommand = `g++ --std=c++11 --output ${outputFile} ${filename}`;
     const executeCommand = outputFile;
     return execute(compileCommand)
         .then(execute.bind(null, executeCommand, true));

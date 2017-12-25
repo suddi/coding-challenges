@@ -1,3 +1,9 @@
+void swap(int *x, int *y) {
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+}
+
 bool compareArray(int A[], int B[]) {
     int sizeA = sizeof(*A) / sizeof(int);
     int sizeB = sizeof(*B) / sizeof(int);

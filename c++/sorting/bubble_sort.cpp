@@ -2,12 +2,6 @@
 #include "../doctest.h"
 #include "../utils.h"
 
-void swap(int *x, int *y) {
-    int temp = *x;
-    *x = *y;
-    *y = temp;
-}
-
 int *solution(int A[], int size) {
     for (int i = 0; i < size; i++) {
         for (int j = 0; j < size - i - 1; j++) {
