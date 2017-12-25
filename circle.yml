@@ -3,7 +3,11 @@ machine:
         Asia/Hong_Kong
     python:
         version: "2.7"
+    node:
+        version: "6"
 dependencies:
+    pre:
+        - sudo apt-get update; sudo apt-get install cppcheck
     override:
         - pip install --requirement test_requirements.txt
         - npm install
@@ -12,6 +16,7 @@ test:
         - python setup.py lint
         - python setup.py test
         - npm test
+        - cppcheck --std=c++14 --quiet .
         - node cpp_runner.js
 notify:
     webhooks:
