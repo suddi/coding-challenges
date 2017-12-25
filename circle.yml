@@ -6,10 +6,13 @@ machine:
 dependencies:
     override:
         - pip install --requirement test_requirements.txt
+        - npm install
 test:
     override:
         - python setup.py lint
         - python setup.py test
+        - npm test
+        - node cpp_runner.js
 notify:
     webhooks:
         - url: https://bot.suddi.io/hooks/circle
