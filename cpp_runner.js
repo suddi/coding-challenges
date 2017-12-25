@@ -53,7 +53,7 @@ function runTest(filename) {
 }
 
 function clearOutputFiles() {
-    const clearCommand = `find . -name "*.out" -delete`;
+    const clearCommand = 'find . -name "*.out" -delete';
     return execute(clearCommand);
 }
 
