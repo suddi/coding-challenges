@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-def solution(value):                                                # O(N)
+def solution(value):                                                # O(1)
     """
     Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
 
@@ -64,7 +64,7 @@ def solution(value):                                                # O(N)
 
     output = ''                                                     # O(1)
 
-    for mapping in roman_numerals:                                  # O(N)
+    for mapping in roman_numerals:                                  # O(1)
         multiple = value / mapping[0]                               # O(1)
         output += mapping[1] * multiple                             # O(1)
         value = value % mapping[0]                                  # O(1)
