@@ -2,7 +2,8 @@
 
 def solution(nums, val):                                            # O(N)
     """
-    Given an array nums and a value val, remove all instances of that value in-place and return the new length.
+    Given an array nums and a value val, remove all instances of that value
+    in-place and return the new length.
 
     >>> solution([3, 2, 2, 3], 3)
     2

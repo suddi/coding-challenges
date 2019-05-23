@@ -6,12 +6,12 @@ def prepare_dequeue(A):                                             # O(N)
         queue.append(A.pop())                                       # O(1)
     return queue                                                    # O(1)
 
-# pylint: disable-msg=line-too-long
 def solution(operations):                                           # O(N^2)
     """
     Create a FIFO queue using stack operations only.
 
-    >>> solution([('enqueue', 1), ('enqueue', 3), ('enqueue', 5), ('enqueue', 4), ('dequeue',), ('enqueue', 1), ('dequeue',)])
+    >>> solution([('enqueue', 1), ('enqueue', 3), ('enqueue', 5),
+    ... ('enqueue', 4), ('dequeue',), ('enqueue', 1), ('dequeue',)])
     1
     3
     """

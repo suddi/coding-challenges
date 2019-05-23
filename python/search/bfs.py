@@ -95,15 +95,16 @@ def bfs(routelist, queue, finish):                                  # O(N^2)
 
     return results
 
-# pylint: disable-msg=line-too-long
 def solution(routes, start, finish):                                # O(N^2)
     """
-    Given a list of routes and their lengths, find the shortest route between 2 nodes using breadth
-    first search.
+    Given a list of routes and their lengths, find the shortest route between 2
+    nodes using breadth first search.
 
-    >>> solution([('a-b', 4), ('b-c', 2), ('a-f', 1), ('a-j', 2), ('b-d', 3), ('c-e', 1), ('d-g', 3), ('c-i', 1), ('f-h', 2)], 'a', 'c')
+    >>> solution([('a-b', 4), ('b-c', 2), ('a-f', 1), ('a-j', 2), ('b-d', 3),
+    ... ('c-e', 1), ('d-g', 3), ('c-i', 1), ('f-h', 2)], 'a', 'c')
     {'route': ['a', 'b', 'c'], 'length': 6}
-    >>> solution([('a-b', 4), ('b-c', 2), ('a-f', 1), ('a-j', 2), ('b-d', 3), ('c-e', 1), ('d-g', 3), ('c-i', 1), ('f-h', 2), ('e-a', 1)], 'a', 'c')
+    >>> solution([('a-b', 4), ('b-c', 2), ('a-f', 1), ('a-j', 2), ('b-d', 3),
+    ... ('c-e', 1), ('d-g', 3), ('c-i', 1), ('f-h', 2), ('e-a', 1)], 'a', 'c')
     {'route': ['a', 'e', 'c'], 'length': 2}
     >>> solution([], 'a', 'c')
     {'route': [], 'length': -1}
