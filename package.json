@@ -31,7 +31,7 @@
     "doctest": "mocha",
     "lint": "eslint .",
     "prepush": "python setup.py lint && python setup.py test && npm test && cppcheck --std=c++11 --quiet . && node cpp_runner.js",
-    "test": "npm run lint && npm audit && npm run doctest"
+    "test": "npm run lint && npm run doctest"
   },
   "dependencies": {},
   "devDependencies": {
