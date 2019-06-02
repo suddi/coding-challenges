@@ -16,10 +16,22 @@ pip install virtualenvwrapper
 mkvirtualenv coding-challenges
 
 pip install --requirement test_requirements.txt
+
+npm install
+````
+
+## Lint
+
+````sh
+npm run lint
+
+python setup.py lint
 ````
 
 ## Test
 
 ````sh
+npm test
+
 python setup.py test
 ````

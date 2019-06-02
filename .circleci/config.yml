@@ -1,0 +1,24 @@
+version: 2
+jobs:
+  python:
+    docker:
+      - image: circleci/python:2.7
+    steps:
+      - checkout
+      - run: pip install -r test_requirements.txt
+      - run: python setup.py lint
+      - run: python setup.py test
+  node:
+    docker:
+      - image: circleci/node:10
+    steps:
+      - checkout
+      - run: npm install
+      - run: npm test
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - python
+      - node
