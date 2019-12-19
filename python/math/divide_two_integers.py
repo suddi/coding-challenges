@@ -27,7 +27,7 @@ def solution(dividend, divisor):                                    # O(N)
         return 'subtract'                                           # O(1)
 
     def get_limit(a, b):                                            # O(1)
-        if (b >= 0 and a > 0) or (b <= 0 and a < 0):                  # O(1)
+        if (b >= 0 and a > 0) or (b <= 0 and a < 0):                # O(1)
             return True                                             # O(1)
         return False                                                # O(1)
 

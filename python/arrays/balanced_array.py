@@ -65,7 +65,7 @@ def solution2(A):                                                   # O(N)
         if pivot == 0:                                              # O(1)
             return i                                                # O(1)
         total -= (2 * A[i])                                         # O(1)
-        i += 1
+        i += 1                                                      # O(1)
 
     return -1                                                       # O(1)
 
