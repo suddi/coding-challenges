@@ -66,7 +66,7 @@ def solution(value):                                                # O(1)
 
     for mapping in roman_numerals:                                  # O(1)
         multiple = value / mapping[0]                               # O(1)
-        output += mapping[1] * multiple                             # O(1)
+        output += mapping[1] * int(multiple)                        # O(1)
         value = value % mapping[0]                                  # O(1)
 
     return output                                                   # O(1)

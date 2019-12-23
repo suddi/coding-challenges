@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-class HashTable(object):
+class HashTable():
     def __init__(self, key, value):                                 # O(1)
         if value is not None:                                       # O(1)
             self.hash_table = {key: value}                          # O(1)
@@ -26,8 +26,12 @@ class HashTable(object):
         >>> HashTable('human', 42).pretty_print()
         ('human', 42)
         """
-        for key, value in self.hash_table.iteritems():              # O(N)
-            print "('%s', %s)" % (key, value),                      # O(1)
+        string = ''                                                 # O(1)
+        for key, value in self.hash_table.items():                  # O(N)
+            string += "('%s', %s) " % (key, value)                  # O(1)
+
+        if string:                                                  # O(1)
+            print(string.strip())                                   # O(1)
 
     def access(self, key):                                          # O(1)
         """
@@ -64,7 +68,7 @@ class HashTable(object):
         >>> HashTable('human', 42).insert('cat', 22).insert('dog', 12) \
             .insert('rabbit', 95).insert('ant', 1).search(52)
         """
-        for key, table_value in self.hash_table.iteritems():        # O(N)
+        for key, table_value in self.hash_table.items():            # O(N)
             if table_value == value:                                # O(1)
                 return key                                          # O(1)
 
@@ -80,7 +84,7 @@ class HashTable(object):
 
         >>> HashTable('human', 42).insert('cat', 22).insert('dog', 12) \
             .insert('rabbit', 95).insert('ant', 1).pretty_print()
-        ('ant', 1) ('rabbit', 95) ('dog', 12) ('human', 42) ('cat', 22)
+        ('human', 42) ('cat', 22) ('dog', 12) ('rabbit', 95) ('ant', 1)
         """
         existing_value = self.hash_table.get(key)                   # O(1)
         self.hash_table[key] = value                                # O(1)

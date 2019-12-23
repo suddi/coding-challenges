@@ -13,7 +13,7 @@ def solution(A):                                                    # O(N^2)
     """
     length = len(A)                                                 # O(1)
 
-    for i in xrange(0, length):                                     # O(N)
+    for i in range(0, length):                                     # O(N)
         current = A[i]                                              # O(1)
         j = i - 1                                                   # O(1)
 

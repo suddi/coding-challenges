@@ -11,7 +11,7 @@ def solution(A, B):                                                 # O(N)
       You  can  assume  that  each  rectangle  object  has  two  variables  in  it:  
     the  x‐y  coordinates  of  the  upper‐left  corner  and  the  bottom‐right corner.
     """
-    print A, B
+    print(A, B)
 
 
 if __name__ == '__main__':

@@ -4,7 +4,7 @@ def partition(A, left, right):                                      # O(N)
     pivot = A[right]                                                # O(1)
     i = left                                                        # O(1)
 
-    for j in xrange(left, right):                                   # O(N)
+    for j in range(left, right):                                   # O(N)
         if A[j] <= pivot:                                           # O(1)
             A[i], A[j] = A[j], A[i]                                 # O(1)
             i += 1                                                  # O(1)

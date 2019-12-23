@@ -3,7 +3,7 @@ version: 2
 jobs:
   python:
     docker:
-      - image: circleci/python:2.7
+      - image: circleci/python:3.8
     steps:
       - checkout
       - run: pip install --user --requirement test_requirements.txt

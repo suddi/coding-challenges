@@ -22,7 +22,7 @@ def solution(A, B):                                                 # O(N)
     def compile_rest(array, index, length):                         # O(N)
         compiled = []                                               # O(1)
         if index != length:                                         # O(1)
-            for x in xrange(index, length):                         # O(N)
+            for x in range(index, length):                         # O(N)
                 compiled.append(array[x])                           # O(1)
         return compiled                                             # O(1)
 

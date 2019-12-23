@@ -18,7 +18,7 @@ def solution(starting_point, hops):                                 # O(N)
     # >>> solution(1, 3)
     # 9
     """
-    print starting_point, hops
+    print(starting_point, hops)
 
     # connections = {
     #     1: (8, 6),

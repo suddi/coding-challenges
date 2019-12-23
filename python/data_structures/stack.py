@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-class Stack(object):
+class Stack():
     def __init__(self, value=None):                                 # O(1)
         if value is not None:                                       # O(1)
             self.stack = [value]                                    # O(1)
@@ -25,10 +25,14 @@ class Stack(object):
         >>> Stack(42).pretty_print()
         42
         """
+        string = ''                                                 # O(1)
         for count, value in enumerate(self.stack):                  # O(N)
-            print value,                                            # O(1)
+            string += str(value) + ' '                              # O(1)
             if count < self.length - 1:                             # O(1)
-                print '->',                                         # O(1)
+                string += '-> '                                     # O(1)
+
+        if string:                                                  # O(1)
+            print(string.strip())                                   # O(1)
 
     def access(self, position):                                     # O(N)
         """

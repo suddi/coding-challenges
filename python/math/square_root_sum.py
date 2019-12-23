@@ -63,7 +63,7 @@ def process_queue(queue):                                           # O(N^2)
         remainder, output = element['remainder'], element['output'] # O(1)
         if not remainder:                                           # O(1)
             return output                                           # O(1)
-        elif remainder > 0:                                         # O(1)
+        if remainder > 0:                                           # O(1)
             ready_queue(remainder, queue, output)                   # O(1)
 
     return []                                                       # O(1)

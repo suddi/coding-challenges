@@ -13,8 +13,8 @@ def solution(A):                                                    # O(N^2)
     """
     length = len(A)                                                 # O(1)
 
-    for i in xrange(0, length):                                     # O(N)
-        for j in xrange(0, length - i - 1):                         # O(N)
+    for i in range(0, length):                                     # O(N)
+        for j in range(0, length - i - 1):                         # O(N)
             if A[j] > A[j + 1]:                                     # O(1)
                 A[j], A[j + 1] = A[j + 1], A[j]                     # O(1)
 

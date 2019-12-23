@@ -2,7 +2,7 @@
 
 def prepare_dequeue(A):                                             # O(N)
     queue = []                                                      # O(1)
-    for _ in xrange(0, len(A)):                                     # O(N)
+    for _ in range(0, len(A)):                                     # O(N)
         queue.append(A.pop())                                       # O(1)
     return queue                                                    # O(1)
 
@@ -24,7 +24,7 @@ def solution(operations):                                           # O(N^2)
         elif operation[0] == 'dequeue':                             # O(1)
             if not dequeue:                                         # O(1)
                 dequeue = prepare_dequeue(enqueue)                  # O(N)
-            print dequeue.pop()                                     # O(1)
+            print(dequeue.pop())                                    # O(1)
 
 if __name__ == '__main__':
     import doctest

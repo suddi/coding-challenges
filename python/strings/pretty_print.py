@@ -31,7 +31,7 @@ def solution(A):                                                    # O(N)
             mapped[key] += value                                    # O(1)
 
     lengths = {}                                                    # O(1)
-    for key, value in mapped.iteritems():                           # O(N)
+    for key, value in mapped.items():                               # O(N)
         lengths[key] = max(len(key), len(str(value))) + 1           # O(1)
 
     return_string = ''                                              # O(1)
@@ -46,7 +46,7 @@ def solution(A):                                                    # O(N)
         return_string += previous_spacing + value + '\n'            # O(1)
         previous_spacing += ' ' * lengths[key]                      # O(1)
 
-    print return_string.strip()                                     # O(1)
+    print(return_string.strip())                                    # O(1)
 
 if __name__ == '__main__':
     import doctest

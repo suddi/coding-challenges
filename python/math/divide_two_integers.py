@@ -18,7 +18,7 @@ def solution(dividend, divisor):                                    # O(N)
     """
     if divisor == 1:                                                # O(1)
         return dividend                                             # O(1)
-    elif divisor == -1:                                             # O(1)
+    if divisor == -1:                                               # O(1)
         return -dividend                                            # O(1)
 
     def get_operation(a, b):                                        # O(1)

@@ -20,13 +20,13 @@ def solution(strs):                                                # O(M * N)
 
     if length == 0:                                                 # O(1)
         return output                                               # O(1)
-    elif length == 1:
+    if length == 1:                                                 # O(1)
         return strs[0]                                              # O(1)
 
     options = strs[0]                                               # O(1)
     for i in range(1, length):                                      # O(M)
         word = strs[i]                                              # O(1)
-        for j in range(0, len(word)):                               # O(N)
+        for j, _ in enumerate(word):                                # O(N)
             if j >= len(options):                                   # O(1)
                 break                                               # O(1)
 

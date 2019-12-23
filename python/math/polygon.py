@@ -45,14 +45,13 @@ def solution(A):                                                    # O(N)
 
     if side_A < 0 or side_B < 0:                                    # O(1)
         return 'other polygon'                                      # O(1)
-    elif num_unique_sides == 1:                                     # O(1)
+    if num_unique_sides == 1:                                       # O(1)
         return 'square'                                             # O(1)
-    elif num_unique_sides == 2:                                     # O(1)
+    if num_unique_sides == 2:                                       # O(1)
         if side_A == side_B:                                        # O(1)
             return 'other polygon'                                  # O(1)
         return 'rectangle'                                          # O(1)
-    else:                                                           # O(1)
-        return 'other polygon'                                      # O(1)
+    return 'other polygon'                                          # O(1)
 
 if __name__ == '__main__':
     import doctest

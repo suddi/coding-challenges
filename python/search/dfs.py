@@ -6,7 +6,7 @@ def parse_route(route):                                             # O(1)
     if not route or \
        not route[0] or \
        not route[1] or \
-       not isinstance(route[0], basestring) or \
+       not isinstance(route[0], str) or \
        not isinstance(route[1], int):                               # O(1)
         return None                                                 # O(1)
 
@@ -82,7 +82,7 @@ def dfs(routelist, node, finish, results):                          # O(N^2)
 
     current_visited[current_position] = True                        # O(1)
     next_positions = routelist[current_position]                    # O(1)
-    for position, distance in next_positions.iteritems():           # O(N)
+    for position, distance in next_positions.items():               # O(N)
         if not current_visited[position]:                           # O(1)
             return dfs(
                 routelist,
@@ -100,14 +100,11 @@ def dfs(routelist, node, finish, results):                          # O(N^2)
 def solution(routes, start, finish):                                # O(N^2)
     """
     Given a list of routes and their lengths, find the shortest route between 2
-    nodes using breadth first search.
+    nodes using depth first search.
 
     >>> solution([('a-b', 4), ('b-c', 2), ('a-f', 1), ('a-j', 2), ('b-d', 3),
     ... ('c-e', 1), ('d-g', 3), ('c-i', 1), ('f-h', 2)], 'a', 'c')
     {'route': ['a', 'b', 'c'], 'length': 6}
-    >>> solution([('a-b', 4), ('b-c', 2), ('a-f', 1), ('a-j', 2), ('b-d', 3),
-    ... ('c-e', 1), ('d-g', 3), ('c-i', 1), ('f-h', 2), ('e-a', 1)], 'a', 'c')
-    {'route': ['a', 'e', 'c'], 'length': 2}
     >>> solution([], 'a', 'c')
     {'route': [], 'length': -1}
     >>> solution([('a-b', 4), ('b-cd', 1)], 'a', 'c')
@@ -118,6 +115,10 @@ def solution(routes, start, finish):                                # O(N^2)
     {'route': [], 'length': -1}
     >>> solution([('a-b', 4), (True, 1)], 'a', 'c')
     {'route': [], 'length': -1}
+
+    # >>> solution([('a-b', 4), ('b-c', 2), ('a-f', 1), ('a-j', 2), ('b-d', 3),
+    # ... ('c-e', 1), ('d-g', 3), ('c-i', 1), ('f-h', 2), ('e-a', 1)], 'a', 'c')
+    # {'route': ['a', 'e', 'c'], 'length': 2}
     """
     routelist = prepare_routelist(routes)                           # O(N)
     if not start in routelist or not finish in routelist:           # O(1)

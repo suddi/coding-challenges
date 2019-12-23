@@ -20,7 +20,7 @@ def solution(A, target):                                            # O(N/2)
 
         if value == target:                                         # O(1)
             return mid                                              # O(1)
-        elif value < target:                                        # O(1)
+        if value < target:                                          # O(1)
             if mid == lower:                                        # O(1)
                 break                                               # O(1)
             lower = mid + 1                                         # O(1)

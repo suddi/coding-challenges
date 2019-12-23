@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 
-class Node(object):
+class Node():
     def __init__(self, value):                                      # O(1)
         self.value = value                                          # O(1)
         self.next = None                                            # O(1)
 
-class LinkedList(object):
+class LinkedList():
     def __init__(self, value):                                      # O(1)
         if value:                                                   # O(1)
             self.head = Node(value)                                 # O(1)
@@ -22,12 +22,16 @@ class LinkedList(object):
         >>> test.print_list()
         42
         """
+        string = ''                                                 # O(1)
         current_node = self.head                                    # O(1)
         while current_node:                                         # O(N)
-            print current_node.value,                               # O(1)
+            string += str(current_node.value) + ' '                 # O(1)
             if current_node.next:                                   # O(1)
-                print '->',                                         # O(1)
+                string += '-> '                                     # O(1)
             current_node = current_node.next                        # O(1)
+
+        if string:                                                  # O(1)
+            print(string.strip())                                   # O(1)
 
     def traverse(self, position):                                   # O(N)
         """
@@ -35,7 +39,7 @@ class LinkedList(object):
 
         >>> node = LinkedList(42).insert(31).insert(30, 0).traverse(20)
         >>> print(node.value) if node else 'N/A'
-        N/A
+        'N/A'
 
         >>> node = LinkedList(42).insert(22, 1).insert(12, 1).insert(95) \
             .insert(1, 0).traverse(3)

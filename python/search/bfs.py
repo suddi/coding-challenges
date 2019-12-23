@@ -7,7 +7,7 @@ def parse_route(route):                                             # O(1)
     if not route or \
        not route[0] or \
        not route[1] or \
-       not isinstance(route[0], basestring) or \
+       not isinstance(route[0], str) or \
        not isinstance(route[1], int):                               # O(1)
         return None                                                 # O(1)
 
@@ -87,7 +87,7 @@ def bfs(routelist, queue, finish):                                  # O(N^2)
 
         current_visited[current_position] = True                    # O(1)
         next_positions = routelist[current_position]                # O(1)
-        for position, distance in next_positions.iteritems():       # O(N)
+        for position, distance in next_positions.items():           # O(N)
             if not current_visited[position]:                       # O(1)
                 queue.append(get_next_node(current_result,
                                            current_visited,

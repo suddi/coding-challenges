@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-class Node(object):
+class Node():
     def __init__(self):                                             # O(1)
         self.left = None                                            # O(1)
         self.right = None                                           # O(1)
@@ -47,7 +47,7 @@ def solution(root, index):                                          # O(logN)
     """
     if index < 1:                                                   # O(1)
         return False                                                # O(1)
-    elif index == 1 and root:                                       # O(1)
+    if index == 1 and root:                                         # O(1)
         return True                                                 # O(1)
 
     paths = get_paths(index, [])                                    # O(logN)

@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 
-class Node(object):
+class Node():
     def __init__(self, value):                                      # O(1)
         self.value = value                                          # O(1)
         self.left = None                                            # O(1)
         self.right = None                                           # O(1)
 
-class Tree(object):
+class Tree():
     def __init__(self, value=None):                                 # O(1)
         if value is not None:                                       # O(1)
             self.root = Node(value)                                 # O(1)
@@ -87,27 +87,29 @@ class Tree(object):
             convert_by_level(node.left, left_position, array)       # O(N)
             convert_by_level(node.right, right_position, array)     # O(N)
 
+            return array                                            # O(1)
+
         if not node:                                                # O(1)
             return []                                               # O(1)
 
         if form == 'preorder':                                      # O(1)
             return [node.value] + self.convert_to_array(node.left, form) + \
                 self.convert_to_array(node.right, form)             # O(N)
-        elif form == 'inorder':                                     # O(1)
+        if form == 'inorder':                                       # O(1)
             return self.convert_to_array(node.left, form) + [node.value] + \
                 self.convert_to_array(node.right, form)             # O(N)
-        elif form == 'postorder':                                   # O(1)
+        if form == 'postorder':                                     # O(1)
             return self.convert_to_array(node.left, form) + \
                 self.convert_to_array(node.right, form) + \
                 [node.value]                                        # O(N)
-        elif form == 'levelorder':
+        if form == 'levelorder':                                    # O(1)
             array = [None] * (pow(2, self.height) - 1)              # O(N)
             set_by_position(self.root, 0, array)                    # O(1)
             convert_by_level(self.root, 0, array)                   # O(N)
             return [x for x in array if x]                          # O(N)
-        else:                                                       # O(1)
-            raise Exception('Unknown form requested `%s` for Tree' \
-                % form)                                             # O(1)
+
+        raise Exception('Unknown form requested `%s` for Tree' \
+            % form)                                                 # O(1)
 
     def pretty_print(self):                                         # O(N)
         """
@@ -121,8 +123,12 @@ class Tree(object):
         42 21 12 4 14 50 99 65
         """
         array = self.convert_to_array(self.root)                    # O(N)
+        string = ''
         for value in array:                                         # O(N)
-            print value,                                            # O(1)
+            string += str(value) + ' '                              # O(1)
+
+        if string:                                                  # O(1)
+            print(string.strip())                                   # O(1)
 
     def access(self, position):                                     # O(N)
         """
@@ -156,8 +162,8 @@ class Tree(object):
         def traverse_movements(node, movements):                    # O(log(N))
             if not node:                                            # O(1)
                 return None                                         # O(1)
-            elif not movements:
-                return node
+            if not movements:                                       # O(1)
+                return node                                         # O(1)
 
             movement = movements.pop()                              # O(1)
             next_node = getattr(node, movement)                     # O(1)
@@ -187,7 +193,7 @@ class Tree(object):
         def find(node, find_value, position):                       # O(log(N))
             if not node:                                            # O(1)
                 return -1                                           # O(1)
-            elif node.value == find_value:                          # O(1)
+            if node.value == find_value:                            # O(1)
                 return position                                     # O(1)
 
             if find_value < node.value:                             # O(1)
@@ -204,14 +210,14 @@ class Tree(object):
         """
         if not position:                                            # O(1)
             return None, height                                     # O(1)
-        elif value == position.value:                               # O(1)
+        if value == position.value:                                 # O(1)
             return position, height                                 # O(1)
 
         lessThan = value < position.value                           # O(1)
         if lessThan and position.left:                              # O(1)
             return self.get_parent(value, position.left, \
                 height + 1)                                         # O(log(N))
-        elif not lessThan and position.right:
+        if not lessThan and position.right:                         # O(1)
             return self.get_parent(value, position.right, \
                 height + 1)                                         # O(log(N))
 
@@ -298,7 +304,7 @@ class Tree(object):
             setattr(parent_node, child_path, node.right)            # O(1)
         else:                                                       # O(1)
             right_node = node.right                                 # O(1)
-            print right_node                                        # O(1)
+            print(right_node)                                       # O(1)
 
         self.size -= 1                                              # O(1)
         return self                                                 # O(1)

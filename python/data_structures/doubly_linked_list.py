@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 
-class Node(object):
+class Node():
     def __init__(self, value):                                      # O(1)
         self.value = value                                          # O(1)
         self.next = None                                            # O(1)
         self.previous = None                                        # O(1)
 
-class LinkedList(object):
+class LinkedList():
     def __init__(self, value=None):                                 # O(1)
         if value is not None:                                       # O(1)
             self.head = Node(value)                                 # O(1)
@@ -33,12 +33,16 @@ class LinkedList(object):
         >>> LinkedList(42).pretty_print()
         42
         """
+        string = ''                                                 # O(1)
         current_node = self.head                                    # O(1)
         while current_node:                                         # O(N)
-            print current_node.value,                               # O(1)
+            string += str(current_node.value) + ' '                 # O(1)
             if current_node.next:                                   # O(1)
-                print '<->',                                        # O(1)
+                string += '<-> '                                    # O(1)
             current_node = current_node.next                        # O(1)
+
+        if string:                                                  # O(1)
+            print(string.strip())                                   # O(1)
 
     def access(self, position):                                     # O(N)
         """
