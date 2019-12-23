@@ -37,22 +37,22 @@ def solution(A):                                                    # O(N)
     >>> solution('-100 200 -100 200')
     'other polygon'
     """
-    array = [int(value) for value in A.split(' ')]
-    side_A = array[0]
-    side_B = array[1]
-    unique_values = set(array)
-    num_unique_sides = len(unique_values)
+    array = [int(value) for value in A.split(' ')]                  # O(N)
+    side_A = array[0]                                               # O(1)
+    side_B = array[1]                                               # O(1)
+    unique_values = set(array)                                      # O(N)
+    num_unique_sides = len(unique_values)                           # O(1)
 
-    if side_A < 0 or side_B < 0:
-        return 'other polygon'
-    elif num_unique_sides == 1:
-        return 'square'
-    elif num_unique_sides == 2:
-        if side_A == side_B:
-            return 'other polygon'
-        return 'rectangle'
-    else:
-        return 'other polygon'
+    if side_A < 0 or side_B < 0:                                    # O(1)
+        return 'other polygon'                                      # O(1)
+    elif num_unique_sides == 1:                                     # O(1)
+        return 'square'                                             # O(1)
+    elif num_unique_sides == 2:                                     # O(1)
+        if side_A == side_B:                                        # O(1)
+            return 'other polygon'                                  # O(1)
+        return 'rectangle'                                          # O(1)
+    else:                                                           # O(1)
+        return 'other polygon'                                      # O(1)
 
 if __name__ == '__main__':
     import doctest

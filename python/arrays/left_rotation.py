@@ -50,7 +50,7 @@ def solution2(A, k):                                                # O(N)
         pos = (len(A) - k + i) % len(A)                             # O(1)
         output[pos] = value                                         # O(1)
 
-    return output
+    return output                                                   # O(1)
 
 if __name__ == '__main__':
     import doctest

@@ -1,29 +1,29 @@
 # -*- coding: utf-8 -*-
 
 class Node(object):
-    def __init__(self):
-        self.left = None
-        self.right = None
+    def __init__(self):                                             # O(1)
+        self.left = None                                            # O(1)
+        self.right = None                                           # O(1)
 
-def get_paths(index, stack):
+def get_paths(index, stack):                                        # O(logN)
     """
     >>> get_paths(10, [])
     ['left', 'right', 'left']
     """
-    if index == 1:
-        return stack
+    if index == 1:                                                  # O(1)
+        return stack                                                # O(1)
 
-    is_odd = index % 2
-    if not is_odd:
-        parent_node = index / 2
-        stack.append('left')
-        return get_paths(parent_node, stack)
+    is_odd = index % 2                                              # O(1)
+    if not is_odd:                                                  # O(1)
+        parent_node = index / 2                                     # O(1)
+        stack.append('left')                                        # O(1)
+        return get_paths(parent_node, stack)                        # O(1)
 
-    parent_node = (index - 1) / 2
-    stack.append('right')
-    return get_paths(parent_node, stack)
+    parent_node = (index - 1) / 2                                   # O(1)
+    stack.append('right')                                           # O(1)
+    return get_paths(parent_node, stack)                            # O(logN)
 
-def solution(root, index):
+def solution(root, index):                                          # O(logN)
     """
     You are given a complete binary tree; on the last level,
     it’s possible that not all leaves exist (but the ones that do,
@@ -45,20 +45,20 @@ def solution(root, index):
     Write a function that determines if a node with a given
     index exists in the tree or not.
     """
-    if index < 1:
-        return False
-    elif index == 1 and root:
-        return True
+    if index < 1:                                                   # O(1)
+        return False                                                # O(1)
+    elif index == 1 and root:                                       # O(1)
+        return True                                                 # O(1)
 
-    paths = get_paths(index, [])
-    current_node = root
-    while paths:
-        path = paths.pop()
-        node = getattr(current_node, path)
-        if not node:
-            return False
-        current_node = node
-    return True
+    paths = get_paths(index, [])                                    # O(logN)
+    current_node = root                                             # O(1)
+    while paths:                                                    # O(<N)
+        path = paths.pop()                                          # O(1)
+        node = getattr(current_node, path)                          # O(1)
+        if not node:                                                # O(1)
+            return False                                            # O(1)
+        current_node = node                                         # O(1)
+    return True                                                     # O(1)
 
 
 if __name__ == '__main__':
