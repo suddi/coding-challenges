@@ -5,12 +5,12 @@ jobs:
       - image: circleci/python:2.7
     steps:
       - checkout
-      - run: pip install -r test_requirements.txt
+      - run: pip install --user --requirement test_requirements.txt
       - run: python setup.py lint
       - run: python setup.py test
   node:
     docker:
-      - image: circleci/node:10
+      - image: circleci/node:12
     steps:
       - checkout
       - run: npm install

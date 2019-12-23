@@ -24,14 +24,15 @@
     "coding-challenges"
   ],
   "engines": {
-    "node": ">= 4.0.0",
-    "npm": ">= 2.0.0"
+    "node": ">= 12.0.0",
+    "npm": ">= 6.0.0"
   },
   "scripts": {
     "doctest": "mocha",
     "lint": "eslint .",
     "prepush": "python setup.py lint && python setup.py test && npm test && node cpp_runner.js",
-    "test": "npm run lint && npm run doctest"
+    "security-check": "npm audit --audit-level high || true",
+    "test": "npm run security-check && npm run lint && npm run doctest"
   },
   "dependencies": {},
   "devDependencies": {
