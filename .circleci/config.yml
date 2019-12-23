@@ -18,7 +18,7 @@ jobs:
       - run: npm test
   c++:
     docker:
-      - image: circle/node:12
+      - image: circleci/node:12
     steps:
       - checkout
       - run: npm install
