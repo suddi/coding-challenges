@@ -15,7 +15,7 @@ def solution(A, k):                                                 # O(N)
     output = ''
     for value in array:
         if len(value) + len(output) > k:
-			return output + more_string
+            return output + more_string
         output = (output + ' ' + value).strip()
     return output + more_string
 
