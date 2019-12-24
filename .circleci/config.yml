@@ -6,7 +6,7 @@ jobs:
       - image: circleci/python:3.8
     steps:
       - checkout
-      - run: pip install --user --requirement test_requirements.txt
+      - run: pip install --user --requirement requirements.txt --requirement test_requirements.txt
       - run: python setup.py lint
       - run: python setup.py test
   node:
@@ -15,14 +15,14 @@ jobs:
     steps:
       - checkout
       - run: npm install
-      - run: npm test
+      - run: npm run test:node
   c++:
     docker:
       - image: circleci/node:12
     steps:
       - checkout
       - run: npm install
-      - run: node cpp_runner.js
+      - run: npm run test:c++
 workflows:
   version: 2
   build_and_test:
