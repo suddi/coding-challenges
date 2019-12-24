@@ -15,7 +15,7 @@ pip install virtualenvwrapper
 ````sh
 mkvirtualenv coding-challenges
 
-pip install --requirement test_requirements.txt
+pip install --requirement requirements.txt --requirement test_requirements.txt
 
 npm install
 ````
@@ -34,4 +34,6 @@ python setup.py lint
 npm test
 
 python setup.py test
+
+node cpp_runner.js
 ````
