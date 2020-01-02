@@ -2,7 +2,7 @@
 
 def prepare_dequeue(A):                                             # O(N)
     queue = []                                                      # O(1)
-    for _ in range(0, len(A)):                                     # O(N)
+    for _ in range(0, len(A)):                                      # O(N)
         queue.append(A.pop())                                       # O(1)
     return queue                                                    # O(1)
 

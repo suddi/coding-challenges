@@ -15,7 +15,7 @@ def solution(A, B):                                                 # O(N)
     if length_A != length_B:                                        # O(1)
         return False                                                # O(1)
 
-    for _ in range(0, length_A):                                   # O(N)
+    for _ in range(0, length_A):                                    # O(N)
         if A == B:                                                  # O(1)
             return True                                             # O(1)
         A = A[1:] + A[0]                                            # O(1)

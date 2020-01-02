@@ -10,14 +10,15 @@ def solution(A, k):                                                 # O(N)
         'in the IJ River in Amsterdam.', 30)
     'Featuring stylish rooms and...'
     """
-    more_string = '...'
-    array = A.split(' ')
-    output = ''
-    for value in array:
-        if len(value) + len(output) > k:
-            return output + more_string
-        output = (output + ' ' + value).strip()
-    return output + more_string
+    more_string = '...'                                             # O(1)
+    array = A.split(' ')                                            # O(N)
+    output = ''                                                     # O(1)
+
+    for value in array:                                             # O(N)
+        if len(value) + len(output) > k:                            # O(1)
+            return output + more_string                             # O(1)
+        output = (output + ' ' + value).strip()                     # O(1)
+    return output + more_string                                     # O(1)
 
 if __name__ == '__main__':
     import doctest

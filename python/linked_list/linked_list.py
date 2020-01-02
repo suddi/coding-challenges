@@ -59,7 +59,7 @@ class LinkedList():
             return current_node                                     # O(1)
         return None                                                 # O(1)
 
-    def insert(self, value, position = None):                       # O(1)
+    def insert(self, value, position=None):                         # O(1)
         """
         Inserts values into the LinkedList
 

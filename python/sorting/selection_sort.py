@@ -13,9 +13,9 @@ def solution(A):                                                    # O(N^2)
     """
     length = len(A)                                                 # O(1)
 
-    for i in range(0, length - 1):                                 # O(N)
+    for i in range(0, length - 1):                                  # O(N)
         current_min = i                                             # O(1)
-        for j in range(i + 1, length):                             # O(N)
+        for j in range(i + 1, length):                              # O(N)
             if A[j] < A[current_min]:                               # O(1)
                 current_min = j                                     # O(1)
 

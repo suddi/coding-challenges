@@ -16,7 +16,7 @@ def solution(number):                                               # O(N)
         1: 1
     }                                                               # O(1)
 
-    for i in range(2, number + 1):                                 # O(N)
+    for i in range(2, number + 1):                                  # O(N)
         m[i] = m[i - 1] + m[i - 2]                                  # O(1)
 
     return m[number]                                                # O(1)

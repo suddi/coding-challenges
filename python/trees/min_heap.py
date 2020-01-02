@@ -24,7 +24,7 @@ def solution(A):                                                    # O(NlogN)
     """
     length = len(A)                                                 # O(1)
 
-    for i in range(length - 1, -1, -1):                            # O(N)
+    for i in range(length - 1, -1, -1):                             # O(N)
         heapify(A, length, i)                                       # O(logN)
     return A                                                        # O(1)
 

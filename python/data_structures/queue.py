@@ -59,7 +59,7 @@ class Queue():
         """
         if position >= self.length or position < 0:                 # O(1)
             raise Exception('Cannot find non-existent position ' \
-                + '%d in Queue' % position)                    # O(1)
+                + '%d in Queue' % position)                         # O(1)
 
         current_node = self.head                                    # O(1)
         i = 0                                                       # O(1)
