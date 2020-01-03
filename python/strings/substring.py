@@ -1,7 +1,7 @@
 def solution(x, y):                                                 # O(N)
     """
-    Write  a  program  to  determine  whether  an  input  string  x  is  a  substring  of 
-    another  input  string  y.
+    Write a program to determine whether an input string x is a substring of
+    another input string y.
 
     >>> solution('bat', 'abate')
     True

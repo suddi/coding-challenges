@@ -1,6 +1,6 @@
 def solution(string):                                               # O(N)
     """
-    Write  a  function  to  convert  a  string  into  an  integer. 
+    Write a function to convert a string into an integer.
     Return None if string is an invalid integer.
 
     >>> solution('123')
