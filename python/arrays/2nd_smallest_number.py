@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 def solution(A):                                                    # O(N)
     """
     Write a function to find the 2nd smallest number in a list.

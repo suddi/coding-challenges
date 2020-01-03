@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 def heapify(A, length, index):                                      # O(logN)
     smallest = index                                                # O(1)
     left = 2 * index + 1                                            # O(1)

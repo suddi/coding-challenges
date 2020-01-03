@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 def validate_floors(floors, max_floors):                            # O(N)
     for floor in floors:                                            # O(N)
         if floor > max_floors:                                      # O(N)

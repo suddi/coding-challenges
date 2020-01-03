@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 class HashTable():
     def __init__(self, key, value):                                 # O(1)
         if value is not None:                                       # O(1)

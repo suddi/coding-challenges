@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 def prepare_dequeue(A):                                             # O(N)
     queue = []                                                      # O(1)
     for _ in range(0, len(A)):                                      # O(N)

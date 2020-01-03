@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 class Stack():
     def __init__(self, value=None):                                 # O(1)
         if value is not None:                                       # O(1)

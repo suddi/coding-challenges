@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 def get_list(A, start, finish):                                     # O(N)
     new_list = [0] * (finish - start + 1)                           # O(N)
     for i in range(start, finish + 1):                              # O(N)

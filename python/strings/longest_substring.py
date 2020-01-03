@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 def solution(S):                                                    # O(N)
     """
     Given that a valid password requires an upper case character and must not contain a digit.

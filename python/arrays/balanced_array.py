@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 def solution1(A):                                                   # O(N)
     """
     You are given a list A (eg. [1, 2, 3, 7, 1, 5]).

@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 def solution(starting_point, hops):                                 # O(N)
     """
     Imagine you place a knight chess piece on a phone dial pad.

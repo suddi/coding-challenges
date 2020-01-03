@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 def solution(number):                                               # O(N)
     """
     Write a function to calculate the factorial of a number

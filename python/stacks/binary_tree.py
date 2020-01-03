@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 class Node():
     def __init__(self):                                             # O(1)
         self.left = None                                            # O(1)

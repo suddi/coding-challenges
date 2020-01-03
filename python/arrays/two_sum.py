@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 def solution(A, target):                                            # O(N)
     """
     Write a function that will return the indexes to be used to add up numbers

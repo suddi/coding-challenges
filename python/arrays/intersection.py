@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 def solution(arrays, k):                                            # O(N^2)
     """
     Given an array of arrays, find the intersecting values in k number of arrays

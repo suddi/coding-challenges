@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 def solution(A, summed_value):                                      # O(N^2)
     """
     Write a function that will return the numbers used to add up to a certain value.

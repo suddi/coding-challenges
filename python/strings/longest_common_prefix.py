@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 def solution(strs):                                                # O(M * N)
     """
     Write a function to find the longest common prefix string amongst an array of strings.

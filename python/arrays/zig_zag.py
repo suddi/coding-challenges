@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 def solution(A):                                                    # O(N)
     """
     Return a given array in Zig Zag fashion.

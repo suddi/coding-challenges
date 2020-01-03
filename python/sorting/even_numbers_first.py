@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 def solution(A):                                                    # O(N/2)
     """
     Write a sorting function to put the even numbers first, odd numbers afterwards.

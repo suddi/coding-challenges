@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 def solution(expression):                                           # O(N)
     """
     Write a function to detect if brackets/parantheses are balanced, given an input string.

@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 def solution(A, k):                                                 # O(N)
     """
     Write  a  program  to create k characters long snippets from sentences A.

@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 def solution(A):                                                    # O(N^2)
     """
     Sort numbers in list A using selection sort.

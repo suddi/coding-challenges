@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 def solution1(A, k):                                                 # O(N^2)
     """
     Write a function to left rotate a list a by k number of times.

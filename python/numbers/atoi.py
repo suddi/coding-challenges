@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 def solution(string):                                               # O(N)
     """
     Write  a  function  to  convert  a  string  into  an  integer. 

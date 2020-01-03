@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 def solution(dividend, divisor):                                    # O(N)
     """
     Given two integers dividend and divisor, divide two integers without

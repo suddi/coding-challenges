@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 def solution(A, B):                                                 # O(N)
     """
     Create a sorted list out of two sorted sub-lists.

@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 def solution(value):                                                # O(1)
     """
     Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.

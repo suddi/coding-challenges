@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 def solution(A, B):                                                 # O(N^2)
     """
     Given 2 strings, write a function to compute how many deletions are necessary to

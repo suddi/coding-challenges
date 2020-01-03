@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 def solution(nums, val):                                            # O(N)
     """
     Given an array nums and a value val, remove all instances of that value

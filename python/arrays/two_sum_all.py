@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 def solution(A, target):                                            # O(N)
     """
     Similar to src.arrays.two_sum, find all the combinations that can be added

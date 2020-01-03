@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 def solution(A):                                                    # O(N)
     """
     Identify whether four sides (given by four integers) can form a square,

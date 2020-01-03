@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 from collections import deque
 
 def compute_squares(k):                                             # O(N)

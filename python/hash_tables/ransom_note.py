@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 def solution1(magazine, ransom):                                     # O(N^2)
     """
     Similar to src.strings.making_anagrams, detect if 2 strings can be equated by

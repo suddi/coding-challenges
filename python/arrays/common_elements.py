@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 def solution(A, B):                                                 # O(N)
     """
     Find common elements in 2 lists.

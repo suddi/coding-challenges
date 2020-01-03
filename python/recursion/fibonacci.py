@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 def solution(number):                                               # O(N)
     """
     Write a function to compute the fibonacci sequence value to the requested iteration.

@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 def solution(string):                                               # O(N)
     """
     Write  a  function  to  reverse  the  order  of  words  in  a  string  in  place.

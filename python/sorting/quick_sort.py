@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 def partition(A, left, right):                                      # O(N)
     pivot = A[right]                                                # O(1)
     i = left                                                        # O(1)

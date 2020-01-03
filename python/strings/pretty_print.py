@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 def solution(A):                                                    # O(N)
     """
     Given a list of tuples, pretty print it to show the associated key and

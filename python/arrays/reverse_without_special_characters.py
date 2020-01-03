@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 def solution(A):                                                    # O(N/2)
     """
     Write a function to reverse a list without affecting special characters and

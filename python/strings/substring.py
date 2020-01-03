@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 def solution(x, y):                                                 # O(N)
     """
     Write  a  program  to  determine  whether  an  input  string  x  is  a  substring  of 

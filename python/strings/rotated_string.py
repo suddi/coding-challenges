@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 def solution(A, B):                                                 # O(N)
     """
     Detect whether two strings are the same, but rotated strings.

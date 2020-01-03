@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 def solution(A, target):                                            # O(N)
     """
     Write a function that will return True if consecutive values in provided list A
