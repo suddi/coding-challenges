@@ -92,6 +92,7 @@ class HashTable():
         position = find(self.table[hash_key], key)                  # O(<N)
         if position > -1:                                           # O(1)
             return self.table[hash_key][position]                   # O(1)
+        return None                                                 # O(1)
 
     def insert(self, key, value):                                   # O(1)
         """
