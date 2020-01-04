@@ -1,6 +1,6 @@
 # pylint: disable-msg=line-too-long
 
-def retrieve_array(digits):
+def retrieve_array(digits):                                         # O(N)
     """
     Take a number and transform it into an array
 
@@ -9,22 +9,22 @@ def retrieve_array(digits):
     >>> retrieve_array(-123456789)
     [-1, 2, 3, 4, 5, 6, 7, 8, 9]
     """
-    string = "{0}".format(digits)
-    length = len(string)
+    string = "{0}".format(digits)                                   # O(1)
+    length = len(string)                                            # O(1)
 
-    array = []
-    minus = False
-    for i in range(0, length):
-        digit = string[i]
-        if digit == '-':
-            minus = True
-        elif minus:
-            array.append(int(digit) * -1)
-            minus = False
-        else:
-            array.append(int(digit))
+    array = []                                                      # O(1)
+    minus = False                                                   # O(1)
+    for i in range(0, length):                                      # O(N)
+        digit = string[i]                                           # O(1)
+        if digit == '-':                                            # O(1)
+            minus = True                                            # O(1)
+        elif minus:                                                 # O(1)
+            array.append(int(digit) * -1)                           # O(1)
+            minus = False                                           # O(1)
+        else:                                                       # O(1)
+            array.append(int(digit))                                # O(1)
 
-    return array
+    return array                                                    # O(1)
 
 def concatenate_number(a, b):
     """

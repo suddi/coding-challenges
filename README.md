@@ -48,3 +48,321 @@ npm test
 # Run C++ doctests with doctest.h at c++/doctest.h
 node cpp_runner.js
 ````
+
+## Python Cheatsheet
+
+### General
+
+````py
+# Swap numbers a, b
+a = 3
+b = 2
+# a = 2, b = 3
+a, b = b, a
+
+# Format print statements
+print("a = {0}, b = {1}".format(a, b))
+
+# See all operations available
+dir(list)
+````
+
+### List Operations
+
+````py
+a = [5]                                                             # O(1)
+
+# a = 5
+a[0]                                                                # O(1)
+
+# 1
+len(a)                                                              # O(1)
+
+# a = [5, 4]
+a.append(4)                                                         # O(1)
+
+b = [3, 2]                                                          # O(1)
+# a = [5, 4, 3, 2]
+a.extend(b)                                                         # O(len(b)) => O(N)
+
+b = [1, 0]                                                          # O(1)
+# [5, 4, 3, 2, 1, 0]
+a + b                                                               # O(len(b)) => O(N)
+
+# b = 2, a = [5, 4, 3]
+b = a.pop()                                                         # O(1)
+
+# a = []
+a.clear()                                                           # O(1)
+
+# a = [5, 4, 3, 2, 1, 0]
+a = [5, 4, 3, 2, 1, 0]                                              # O(1)
+
+# [3, 2]
+a[2:4]                                                              # O(4 - 2) => O(j - i)
+
+# True
+isinstance(a, list)                                                 # O(1)
+
+# b = [5, 4, 3, 2, 1, 0]
+b = [5, 4, 3, 2, 1, 0]                                              # O(1)
+
+# True
+a == b                                                              # O(N)
+
+# False
+a != b                                                              # O(N)
+
+# a = [6, 5, 4, 3, 2, 1, 0]
+a.insert(0, 6)                                                      # O(N)
+
+# a = [5, 4, 3, 2, 1, 0]
+del a[0]                                                            # O(N)
+
+# a = [5, 3, 2, 1, 0]
+a.remove(4)                                                         # O(N)
+
+v = 9                                                               # O(1)
+# False
+v in a                                                              # O(N)
+
+# [5, 3, 2, 1, 0]
+a.copy()                                                            # O(N)
+
+# b = 5, a = [3, 2, 1, 0]
+b = a.pop(0)                                                        # O(N)
+
+# 0
+min(a)                                                              # O(N)
+
+# 3
+max(a)                                                              # O(N)
+
+# a = [0, 1, 2, 3]
+a.reverse()                                                         # O(N)
+
+# a = [0, 1, 2, 3], b = [0, 10, 20, 30]
+b = []
+for value in a:                                                     # O(N)
+    b.append(value * 10)                                            # O(1)
+
+# a = [0, 1, 2, 3], b = [0, 10, 20, 30]
+b = map(lambda v: v * 10, a)                                        # O(N)
+
+# a = [0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3]
+a = 3 * a                                                           # O(3N) => O(kN)
+
+# a = [0, 0, 0, 1, 1, 1, 2, 2, 2, 3, 3, 3]
+a.sort()                                                            # O(NlogN)
+
+# a = [3, 3, 3, 2, 2, 2, 1, 1, 1, 0, 0, 0]
+a.sort(reverse=True)                                                # O(NlogN)
+
+# 9
+a.index(0)                                                          # O(N)
+
+# 3
+a.count(1)                                                          # O(N)
+````
+
+### Dictionary Operations
+
+````py
+a = {'i': 4, 'j': 5, 'k': 6, 'l': 9, 'm': 2}                        # O(1)
+
+# 4
+a['i']                                                              # O(1)
+
+# a = {'i': 1, 'j': 5, 'k': 6, 'l': 9, 'm': 2}
+a['i'] = 1                                                          # O(1)
+
+# 5
+len(a)                                                              # O(1)
+
+# a = {'j': 5, 'k': 6, 'l': 9, 'm': 2}
+del a['i']                                                          # O(1)
+
+# 10
+a.get('i', 10)                                                      # O(1)
+
+# a = {'j': 5, 'k': 6, 'l': 9, 'm': 2, 'i': 1}
+a.setdefault('i', 1)                                                # O(1)
+
+# 1, a = {'j': 5, 'k': 6, 'l': 9, 'm': 2}
+a.pop('i')                                                          # O(1)
+
+# ('m', 2), a = {'j': 5, 'k': 6, 'l': 9}
+a.popitem()                                                         # O(1)
+
+v = 9
+# False
+v in a                                                              # O(1)
+
+# ['j', 'k', 'l']
+a.keys()                                                            # O(1)
+
+# [5, 6, 9]
+a.values()                                                          # O(1)
+
+# [('j', 5), ('k', 6), ('l', 9)]
+a.items()                                                           # O(1)
+
+# a = {}
+a.clear()                                                           # O(1)
+
+b = [('c', 1), ('d', 3)]
+# a = {'c': 1, 'd': 3}
+a = dict(b)                                                         # O(N)
+
+# False
+a == b                                                              # O(N)
+# True
+a == dict(b)                                                        # O(N)
+
+# True
+a != b                                                              # O(N)
+
+# a = {'c': 12, 'd': 3}
+a['c'] = 12                                                         # O(1)
+
+# 'c'
+min(a)                                                              # O(N)
+
+# 'd'
+max(a)                                                              # O(N)
+
+b = ['a', 'e', 'i', 'o', 'u']                                       # O(1)
+# a = {'a': 'vowel', 'e': 'vowel', 'i': 'vowel', 'o': 'vowel', 'u': 'vowel'}
+a = a.fromkeys(b, 'vowel')                                          # O(N)
+
+# {'a': 'vowel', 'e': 'vowel', 'i': 'vowel', 'o': 'vowel', 'u': 'vowel'}
+a.copy()                                                            # O(N)
+
+# {'a': 'vowel', 'e': 'vowel', 'i': 'vowel', 'o': 'meh', 'u': 'vowel', 'y': 'not-really-a-vowel'}
+a.update({'y': 'not-really-a-vowel', 'o': 'meh'})                   # O(N)
+````
+
+# Tuple Operations
+
+````py
+a = (4, 5, 6, 9, 2)                                                 # O(1)
+
+# 4
+a[0]                                                                # O(1)
+
+# 5
+len(a)                                                              # O(1)
+
+# [6, 9]
+a[2:4]                                                              # O(4 - 2) => O(j - i)
+
+b = [1, 3]                                                          # O(1)
+# b = (1, 3)
+tuple(b)                                                            # O(len(b)) => O(N)
+
+# False
+a == b                                                              # O(N)
+
+# True
+a != b                                                              # O(N)
+
+v = 9                                                               # O(1)
+# True
+v in a                                                              # O(N)
+
+# 2
+min(a)                                                              # O(N)
+
+# 9
+max(a)                                                              # O(N)
+
+b = []
+# b = [8, 10, 12, 18, 4]
+for v in a                                                          # O(N)
+    b.append(a * 2)                                                 # O(1)
+
+# (4, 5, 6, 9, 2, 4, 5, 6, 9, 2, 4, 5, 6, 9, 2)
+3 * a                                                               # O(3N) => O(kN)
+
+# 3
+a.count(2)                                                          # O(N)
+
+# 4
+a.index(2)                                                          # O(N)
+````
+
+### Set Operations
+
+````py
+a = set([4, 5, 6, 9, 2, 4])                                         # O(1)
+
+# 5
+len(a)                                                              # O(1)
+
+# a = {2, 4, 5, 6, 7, 9}
+a.add(7)                                                            # O(1)
+
+v = 9                                                               # O(1)
+# True
+v in a                                                              # O(1)
+
+# a = {2, 4, 5, 7, 9}
+a.remove(6)                                                         # O(1)
+
+# a = {2, 4, 7, 9}
+a.discard(5)                                                        # O(1)
+
+# 2, a = {4, 7, 9}
+a.pop()                                                             # O(1)
+
+# a = {}
+a.clear()                                                           # O(1)
+
+b = [1, 1, 3]                                                       # O(1)
+a = {1, 3}
+a = set(b)                                                          # O(len(b)) => O(N)
+
+b = {}                                                              # O(1)
+# a = {1, 3}, b = {1, 2, 3, 6}
+for v in a                                                          # O(N)
+    b.add(a * 2)                                                    # O(1)
+
+# False
+a == b                                                              # O(N)
+
+# True
+a != b                                                              # O(N)
+
+# True
+a < b                                                               # O(N)
+
+# True
+a <= b                                                              # O(N)
+
+# False
+a > b                                                               # O(N)
+
+# False
+a >= b                                                              # O(N)
+
+# {1, 2, 3, 6}
+a | b                                                               # O(len(a) + len(b)) => O(M + N)
+
+# {1, 3}
+a & b                                                               # O(len(a) + len(b)) => O(M + N)
+
+# {}
+a - b                                                               # O(len(a) + len(b)) => O(M + N)
+
+# {2, 6}
+a ^ b                                                               # O(len(a) + len(b)) => O(M + N)
+
+# {1, 3}
+a.copy()                                                            # O(N)
+
+# 1
+min(a)                                                              # O(N)
+
+# 3
+max(a)                                                              # O(N)
+````
