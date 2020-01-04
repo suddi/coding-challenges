@@ -130,3 +130,7 @@ class HashTable():
             del self.table[hash_key][position]                      # O(1)
 
         return self                                                 # O(1)
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod()
