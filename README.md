@@ -55,16 +55,98 @@ node cpp_runner.js
 
 ````py
 # Swap numbers a, b
-a = 3
-b = 2
+a = 3                                                               # O(1)
+b = 2                                                               # O(1)
 # a = 2, b = 3
-a, b = b, a
+a, b = b, a                                                         # O(1)
 
 # Format print statements
-print("a = {0}, b = {1}".format(a, b))
+# a = 2, b = 3
+print("a = {0}, b = {1}".format(a, b))                              # O(1)
+
+# False
+all([3, 2, -1, 0])                                                  # O(N)
+
+# True
+any([3, 2, -1, 0])                                                  # O(N)
+
+# '0b1000'
+bin(8)                                                              # O(1)
+
+# '0x58'
+hex(88)                                                             # O(1)
+
+# True
+bool(-1)                                                            # O(1)
+
+# '0'
+chr(48)                                                             # O(1)
+# 'A'
+chr(65)                                                             # O(1)
+# 'a'
+chr(97)                                                             # O(1)
+# 97
+ord('a')                                                            # O(1)
 
 # See all operations available
-dir(list)
+dir(list)                                                           # O(1)
+
+# Get position and value during iteration
+position, value = enumerate([3, 2, -1, 0])                          # O(N)
+
+# Iterate through range
+range(0, 5)                                                         # O(N)
+
+# Take input from stdin
+a = input('What is your name? ')                                    # O(1)
+
+# True
+isinstance([3, 2, 1], list)                                         # O(1)
+
+# 'el'
+'hello'[slice(1, 3, 1)]                                             # O(j - i)
+````
+
+### Functional Programming
+
+````py
+# [2, 4, 6]
+list(map(lambda x: x * 2, [1, 2, 3]))                               # O(N)
+
+# [5, 7, 9]
+list(map(lambda x, y: x + y, [1, 2, 3], [4, 5, 6]))                 # O(N)
+
+# [1, 3]
+list(filter(lambda x: x % 2, [1, 2, 3]))                            # O(N)
+````
+
+### Math
+
+````py
+# Set to infinity
+a = float('inf')                                                    # O(1)
+
+# Set to negative infinity
+a = float('-inf')                                                   # O(1)
+
+# Raise to exponential power
+# 8
+2 ** 3                                                              # O(1)
+# 8
+pow(2, 3)                                                           # O(1)
+
+# 32.3
+abs(-32.3)                                                          # O(1)
+
+# Returns a tuple containing the quotient and remainder
+# (2, 2)
+divmod(8, 3)                                                        # O(1)
+
+# 4.22
+round(4.222, 2)                                                     # O(1)
+
+# 9
+sum([3, 4, 2])                                                      # O(1)
 ````
 
 ### List Operations
@@ -100,9 +182,6 @@ a = [5, 4, 3, 2, 1, 0]                                              # O(1)
 
 # [3, 2]
 a[2:4]                                                              # O(4 - 2) => O(j - i)
-
-# True
-isinstance(a, list)                                                 # O(1)
 
 # b = [5, 4, 3, 2, 1, 0]
 b = [5, 4, 3, 2, 1, 0]                                              # O(1)
@@ -365,4 +444,26 @@ min(a)                                                              # O(N)
 
 # 3
 max(a)                                                              # O(N)
+````
+
+### Object Operations
+
+````py
+class A():
+    def __init__(self):                                             # O(1)
+        self.a = 42                                                 # O(1)
+
+v = A()                                                             # O(1)
+
+# False
+hasattr(v, 'b')                                                     # O(1)
+
+# 42
+getattr(v, 'a')                                                     # O(1)
+
+# v.a = 42, v.b = 36
+setattr(v, 'b', 36)                                                 # O(1)
+
+# v.b = 36
+delattr(v, 'a')                                                     # O(1)
 ````

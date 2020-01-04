@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 # pylint: disable-msg=empty-docstring,unused-argument
 def solution(a):
     """
