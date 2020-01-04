@@ -15,11 +15,10 @@ def dfs(position, hops, combinations, combination=''):
     if not hops:
         combination += str(position)
         combinations.append(combination)
-        return combinations
-
-    connection = connections[position]
-    for next_step in connection:
-        dfs(next_step, hops - 1, combinations, combination + str(position))
+    else:
+        connection = connections[position]
+        for next_step in connection:
+            dfs(next_step, hops - 1, combinations, combination + str(position))
 
 def solution(starting_point, hops):                                 # O(N)
     """

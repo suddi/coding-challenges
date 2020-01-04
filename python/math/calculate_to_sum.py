@@ -26,7 +26,7 @@ def retrieve_array(digits):                                         # O(N)
 
     return array                                                    # O(1)
 
-def concatenate_number(a, b):
+def concatenate_number(a, b):                                       # O(1)
     """
     Concatenates two number together
 
@@ -39,11 +39,11 @@ def concatenate_number(a, b):
     >>> concatenate_number(0, 7)
     7
     """
-    if a >= 0:
-        return (a * 10) + b
-    return (a * 10) - b
+    if a >= 0:                                                      # O(1)
+        return (a * 10) + b                                         # O(1)
+    return (a * 10) - b                                             # O(1)
 
-def calculate_computation(computation, num, operation):
+def calculate_computation(computation, num, operation):             # O(1)
     """
     If values exist in array concatenate with operation, else return number
 
@@ -52,11 +52,11 @@ def calculate_computation(computation, num, operation):
     >>> calculate_computation([112], 42, '^')
     [112, '^', 42]
     """
-    if computation:
-        return computation + [operation, num]
-    return [num]
+    if computation:                                                 # O(1)
+        return computation + [operation, num]                       # O(1)
+    return [num]                                                    # O(1)
 
-def concatenate_or_append(value, output):
+def concatenate_or_append(value, output):                           # O(1)
     """
     Either concatenate a list or append to it, in order to keep list flattened
     as list of lists
@@ -66,12 +66,12 @@ def concatenate_or_append(value, output):
     >>> concatenate_or_append([[42, 49]], [[23, 35]])
     [[23, 35], [42, 49]]
     """
-    if isinstance(value[0], list):
-        output += value
-    else:
-        output.append(value)
+    if isinstance(value[0], list):                                  # O(1)
+        output += value                                             # O(1)
+    else:                                                           # O(1)
+        output.append(value)                                        # O(1)
 
-    return output
+    return output                                                   # O(1)
 
 def find_paths(summed_value, previous_number, computation, index, array):
     """
