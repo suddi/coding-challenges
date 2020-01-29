@@ -420,7 +420,7 @@ a.copy()                                                            # O(N)
 a.update({'y': 'not-really-a-vowel', 'o': 'meh'})                   # O(N)
 ````
 
-# Tuple Operations
+### Tuple Operations
 
 ````py
 a = (4, 5, 6, 9, 2)                                                 # O(1)
