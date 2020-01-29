@@ -105,6 +105,9 @@ isinstance([3, 2, 1], list)                                         # O(1)
 
 # 'el'
 'hello'[slice(1, 3, 1)]                                             # O(j - i)
+
+# ['e', 'h', 'l', 'l', 'o']
+sorted('hello')                                                     # O(N)
 ````
 
 ### Functional Programming
@@ -147,6 +150,102 @@ round(4.222, 2)                                                     # O(1)
 
 # 9
 sum([3, 4, 2])                                                      # O(1)
+````
+
+### String Operations
+
+````py
+a = 'python is awesome!'                                            # O(1)
+
+# 'Python is awesome!'
+a.capitalize()                                                      # O(1)
+
+# 'python is awesome!'
+a.lower()                                                           # O(N)
+
+# 'PYTHON IS AWESOME!'
+a.upper()                                                           # O(N)
+
+# 'Python Is Awesome!'
+a.title()                                                           # O(N)
+
+# 2
+a.count('o')                                                        # O(1)
+
+# True
+a.endswith('!')                                                     # O(1)
+
+# False
+a.startswith('javascript')                                          # O(1)
+
+# 7
+a.find('is')                                                        # O(N)
+
+# -1
+a.find('not')                                                       # O(N)
+
+# 7
+a.index('is')                                                       # O(N)
+
+# a = 'python is awesome'
+a = a[:-1]                                                          # O(N)
+
+# a = 'pythonisawesome'
+a = a.replace(' ', '')                                              # O(N)
+
+# True
+a.isalnum()                                                         # O(N)
+
+# True
+a.isalpha()                                                         # O(N)
+
+# False
+a.isdecimal()                                                       # O(N)
+
+# False
+a.isdigit()                                                         # O(N)
+
+# True
+a.isidentifier()                                                    # O(N)
+
+# False
+a.isnumeric()                                                       # O(N)
+
+# False
+a.isspace()                                                         # O(N)
+
+# False
+a.istitle()                                                         # O(1)
+
+# True
+a.islower()                                                         # O(N)
+
+# False
+a.isupper()                                                         # O(N)
+
+# '-pythonisawesome-pythonisawesome-'
+a.join('---')                                                       # O(N)
+
+# 'pythonisawesome     '
+a.ljust(20)                                                         # O(N)
+
+# '     pythonisawesome'
+a.rjust(20)                                                         # O(N)
+
+# 'PYTHONISAWESOME'
+a.swapcase()                                                        # O(N)
+
+# 'pythonisawesome'
+a.lstrip()                                                          # O(N)
+
+# 'pythonisawesome'
+a.rstrip()                                                          # O(N)
+
+# 'pythonisawesome'
+a.strip()                                                           # O(N)
+
+# ['python', 'awesome']
+a.split('is')                                                       # O(N)
 ````
 
 ### List Operations
