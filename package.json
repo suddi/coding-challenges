@@ -30,7 +30,6 @@
   "scripts": {
     "doctest": "mocha",
     "lint": "eslint .",
-    "prepush": "npm test",
     "security-check": "npm audit --audit-level high || true",
     "test": "npm run test:python && npm run test:node && npm run test:c++",
     "test:node": "npm run security-check && npm run lint && npm run doctest",
@@ -43,7 +42,7 @@
     "eslint-config-suddi": "^4.0.0",
     "husky": "^4.0.2",
     "jsdoctest": "^1.0.0",
-    "mocha": "^6.2.2"
+    "mocha": "^7.0.1"
   },
   "eslintConfig": {
     "extends": "suddi/backend",
@@ -53,6 +52,11 @@
       "no-unused-vars": "off",
       "no-multi-spaces": "off",
       "prefer-const": "off"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm test"
     }
   }
 }
