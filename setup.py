@@ -1,10 +1,11 @@
+import sys
+
 # pylint: disable-msg=no-name-in-module,import-error
 from distutils.cmd import Command
 from os import getcwd, path
 from subprocess import check_call
 from setuptools import setup
 
-import sys
 
 class PylintCommand(Command):
     description = 'run pylint on Python source files'
