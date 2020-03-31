@@ -8,7 +8,6 @@ jobs:
       - checkout
       - run: pip install --user --requirement requirements.txt --requirement test_requirements.txt
       - run: python setup.py lint
-      - run: ls -al
       - run: rm __init__.py
       - run: python setup.py test
   node:
