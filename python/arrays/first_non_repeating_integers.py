@@ -1,4 +1,4 @@
-def solution(A):
+def solution(A):                                                    # O(N)
     """
     Given an array find the first non-repeating integers in the array
 
