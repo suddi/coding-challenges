@@ -4,7 +4,7 @@ def solution(S):                                                    # O(N)
     the 7 letters:
     "B", "A", "L", "L" "O", "O", "N"
 
-    return how many times you can retrieve these characters from string S.
+    Return how many times you can retrieve these characters from string S.
 
     >>> solution('AGEASEBESLOLOBN')
     1

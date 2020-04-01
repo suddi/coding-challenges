@@ -2,6 +2,9 @@ package codingChallenges
 
 import "math"
 
+/*
+   Write a function to find the 2nd biggest number in a list.
+*/
 func solution(numbers []int64) int64 {
 	var max1 int64 = math.MinInt64
 	var max2 int64 = math.MinInt64
