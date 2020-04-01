@@ -37,3 +37,4 @@ workflows:
       - python
       - node
       - c++
+      - go
