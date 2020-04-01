@@ -31,10 +31,11 @@
     "doctest": "mocha",
     "lint": "eslint .",
     "security-check": "npm audit --audit-level high || true",
-    "test": "npm run test:python && npm run test:node && npm run test:c++",
+    "test": "npm run test:python && npm run test:node && npm run test:c++ && npm run test:go",
     "test:node": "npm run security-check && npm run lint && npm run doctest",
     "test:python": "python setup.py lint && python setup.py test",
-    "test:c++": "node cpp_runner.js"
+    "test:c++": "node cpp_runner.js",
+    "test:go": "go test ./... --cover"
   },
   "dependencies": {},
   "devDependencies": {
