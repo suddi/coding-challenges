@@ -6,7 +6,7 @@
 [![David](https://img.shields.io/david/dev/suddi/coding-challenges.svg)](https://david-dm.org/suddi/coding-challenges?type=dev)
 [![license](https://img.shields.io/github/license/suddi/coding-challenges.svg)](https://github.com/suddi/coding-challenges/blob/master/LICENSE)
 
-Solutions to common coding challenge questions answered in Python 3.8, Node.js 12 and C++ 11.
+Solutions to common coding challenge questions answered in Python 3.8, Node.js 12, C++ 11 and Go 1.14.
 
 ## Setup
 
