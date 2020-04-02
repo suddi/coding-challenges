@@ -18,6 +18,7 @@ jobs:
       - checkout
       - run: npm install
       - run: npm run test:node
+      - run: bash <(curl -s https://codecov.io/bash)
 
   c++:
     docker:

@@ -1,10 +1,13 @@
 # Coding Challenges
 
 [![CircleCI](https://circleci.com/gh/suddi/coding-challenges.svg?style=svg)](https://circleci.com/gh/suddi/coding-challenges)
+[![codecov](https://codecov.io/gh/suddi/coding-challenges/branch/master/graph/badge.svg)](https://codecov.io/gh/suddi/coding-challenges)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/f49da84091a24ef8bae87bdc4ed10423)](https://www.codacy.com/app/Suddi/coding-challenges)
 [![David](https://img.shields.io/david/suddi/coding-challenges.svg)](https://david-dm.org/suddi/coding-challenges)
 [![David](https://img.shields.io/david/dev/suddi/coding-challenges.svg)](https://david-dm.org/suddi/coding-challenges?type=dev)
 [![license](https://img.shields.io/github/license/suddi/coding-challenges.svg)](https://github.com/suddi/coding-challenges/blob/master/LICENSE)
+
+[![codecov](https://codecov.io/gh/suddi/coding-challenges/branch/master/graph/badge.svg)](https://codecov.io/gh/suddi/coding-challenges)
 
 Solutions to common coding challenge questions answered in Python 3.8, Node.js 12, C++ 11 and Go 1.14.
 
