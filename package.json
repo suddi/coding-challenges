@@ -18,7 +18,6 @@
   "files": [
     "javascript"
   ],
-  "main": "javascript/index.js",
   "license": "MIT",
   "keywords": [
     "coding-challenges"
@@ -28,22 +27,23 @@
     "npm": ">= 6.0.0"
   },
   "scripts": {
-    "doctest": "mocha",
+    "coverage": "nyc mocha",
     "lint": "eslint .",
     "security-check": "npm audit --audit-level high || true",
     "test": "npm run test:python && npm run test:node && npm run test:c++ && npm run test:go",
-    "test:node": "npm run security-check && npm run lint && npm run doctest",
+    "test:node": "npm run security-check && npm run lint && npm run coverage",
     "test:python": "python setup.py lint && python setup.py test",
     "test:c++": "node cpp_runner.js",
     "test:go": "go test ./... --cover"
   },
   "dependencies": {},
   "devDependencies": {
+    "chai": "^4.2.0",
     "eslint": "^6.8.0",
     "eslint-config-suddi": "^4.0.0",
     "husky": "^4.0.2",
-    "jsdoctest": "^1.0.0",
-    "mocha": "^7.0.1"
+    "mocha": "^6.2.3",
+    "nyc": "^15.0.0"
   },
   "eslintConfig": {
     "extends": "suddi/backend",

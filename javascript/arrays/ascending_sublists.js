@@ -2,12 +2,6 @@
 
 /**
  * Write a function to group together all ascending sublists within a list a.
- *
- * @example
- * solution([1, 2, 10, 10, 8, 12, 5, 23, 1])
- * // => [[1, 2, 10, 10], [8, 12], [5, 23], [1]]
- * solution([3, 4, 5, 12, 2, 3, 5, 2, 5, -1])
- * // => [[3, 4, 5, 12], [2, 3, 5], [2, 5], [-1]]
  */
 function solution(a) {                                              // O(N)
     let result = [];                                                // O(1)
@@ -29,3 +23,7 @@ function solution(a) {                                              // O(N)
     }
     return result;                                                  // O(1)
 }
+
+module.exports = {
+    solution
+};

@@ -13,7 +13,7 @@ def create_input_array():
     del input_array[remove_index]
     return (input_array, expected_result)
 
-def test():
+def test_solution():
     seed(1)
     for _ in range(0, 100):
         input_array, expected_result = create_input_array()

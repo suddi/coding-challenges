@@ -1,7 +1,6 @@
 package codingChallenges
 
 import (
-	"fmt"
 	"math"
 	"testing"
 )
@@ -31,7 +30,6 @@ func TestSolution(t *testing.T) {
 		result := solution(test.Input)
 
 		if result != test.ExpectedResult {
-			fmt.Println(result)
 			t.Errorf("Test Case %d: FAILED", caseNumber)
 		}
 	}
