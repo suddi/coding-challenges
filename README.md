@@ -7,7 +7,7 @@
 [![David](https://img.shields.io/david/dev/suddi/coding-challenges.svg)](https://david-dm.org/suddi/coding-challenges?type=dev)
 [![license](https://img.shields.io/github/license/suddi/coding-challenges.svg)](https://github.com/suddi/coding-challenges/blob/master/LICENSE)
 
-[![codecov](https://codecov.io/gh/suddi/coding-challenges/branch/master/graph/badge.svg)](https://codecov.io/gh/suddi/coding-challenges)
+[![codecov](https://codecov.io/gh/suddi/coding-challenges/branch/master/graphs/commits.svg)](https://codecov.io/gh/suddi/coding-challenges)
 
 Solutions to common coding challenge questions answered in Python 3.8, Node.js 12, C++ 11 and Go 1.14.
 
