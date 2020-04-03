@@ -2,3 +2,10 @@ engines:
     pylint:
         enabled: true
         python_version: 3
+    eslint:
+        enabled: true
+    golint:
+        enabled: true
+    cppcheck:
+        enabled: true
+        language: c++
