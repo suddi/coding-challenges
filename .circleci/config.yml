@@ -43,3 +43,7 @@ workflows:
       - node
       - c++
       - go
+
+notify:
+  webhooks:
+    - url: https://bot.suddi.io/hooks/circle
