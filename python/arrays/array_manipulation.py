@@ -1,4 +1,4 @@
-def solution(array_size, queries):
+def solution(array_size, queries):                                  # O(M * N)
     """
     Starting with a 1-indexed array of zeros and a list of operations,
     for each operation add a value to each of the array element between
@@ -25,21 +25,19 @@ def solution(array_size, queries):
     >>> solution(5, [(1, 2, 100), (2, 5, 100), (3, 4, 100)])
     200
     """
-    array = []
-    for _ in range(0, array_size):
-        array.append(0)
+    array = [0] * array_size                                        # O(M)
 
-    max_value = float('-inf')
-    for (a, b, k) in queries:
-        i = a - 1
-        j = b - 1
-        while i < j:
-            array[i] += k
-            max_value = max(array[i], max_value)
-            i += 1
+    max_value = float('-inf')                                       # O(1)
+    for (a, b, k) in queries:                                       # O(N)
+        i = a - 1                                                   # O(1)
+        j = b - 1                                                   # O(1)
+        while i < j:                                                # O(M)
+            array[i] += k                                           # O(1)
+            max_value = max(array[i], max_value)                    # O(1)
+            i += 1                                                  # O(1)
 
-    return max_value
+    return max_value                                                # O(1)
 
 if __name__ == '__main__':
     import doctest
-    doctest.testmod
+    doctest.testmod()

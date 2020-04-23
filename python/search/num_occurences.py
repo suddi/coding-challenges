@@ -1,27 +1,28 @@
-def binary_search(array, k, pos):
-    i = 0
-    j = len(array) - 1
+def binary_search(array, k, pos):                                   # O(logN)
+    i = 0                                                           # O(1)
+    j = len(array) - 1                                              # O(1)
 
-    while i < j:
-        mid = ((j - i) // 2) + i
+    while i < j:                                                    # O(logN)
+        mid = ((j - i) // 2) + i                                    # O(1)
 
-        if array[mid] > k:
-            j = mid
-        elif array[mid] < k:
-            i = mid
-        else:
-            if pos == 'start':
-                if mid == i or array[mid - 1] != k:
-                    return mid
-                j = mid
-            elif pos == 'end':
-                if mid == j or array[mid + 1] != k:
-                    return mid
-                elif mid + 1 == j and array[mid + 1] == k:
-                    return mid + 1
-                i = mid
+        if array[mid] > k:                                          # O(1)
+            j = mid                                                 # O(1)
+        elif array[mid] < k:                                        # O(1)
+            i = mid                                                 # O(1)
+        else:                                                       # O(1)
+            if pos == 'start':                                      # O(1)
+                if mid == i or array[mid - 1] != k:                 # O(1)
+                    return mid                                      # O(1)
+                j = mid                                             # O(1)
+            elif pos == 'end':                                      # O(1)
+                if mid == j or array[mid + 1] != k:                 # O(1)
+                    return mid                                      # O(1)
 
-def solution(array, k):
+                if mid + 1 == j and array[mid + 1] == k:            # O(1)
+                    return mid + 1                                  # O(1)
+                i = mid                                             # O(1)
+
+def solution(array, k):                                             # O(logN)
     """
     Given a sorted array, get the number of occurences of k
 
@@ -34,14 +35,14 @@ def solution(array, k):
     >>> solution([], 1)
     0
     """
-    length = len(array)
-    if not length:
-        return 0
+    length = len(array)                                             # O(1)
+    if not length:                                                  # O(1)
+        return 0                                                    # O(1)
 
-    start = binary_search(array, k, 'start')
-    end = binary_search(array, k, 'end')
+    start = binary_search(array, k, 'start')                        # O(logN)
+    end = binary_search(array, k, 'end')                            # O(logN)
 
-    return end - start + 1
+    return end - start + 1                                          # O(1)
 
 if __name__ == '__main__':
     import doctest
