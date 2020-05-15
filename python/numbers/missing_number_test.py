@@ -1,3 +1,5 @@
+# pylint: disable-msg=import-error
+
 from random import (seed, randint)
 
 from python.numbers.missing_number import solution
